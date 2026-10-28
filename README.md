@@ -80,7 +80,6 @@ npm run cli -- chat --mode live --db .runtime/chat.sqlite
 | [手工验收流程](docs/07-acceptance-guide.md) | 六项必验、状态查询、占用变更与重复提交 |
 | [终端聊天](docs/08-chat-guide.md) | 自然语言示例、本人确认、资料补充、恢复和聊天记录 |
 | [当前范围与整体架构](docs/09-scope-and-architecture.md) | 已实现能力、分层职责、验证依据和交付边界 |
-| [提交检查清单](docs/10-submission-checklist.md) | 作业要求完成情况、待填写信息及可选改进 |
 | [运行汇总](examples/mock/summary.json) | 11 组输入、实际输出、Trace、最终存储状态 |
 
 ## 本人确认流程
