@@ -1,0 +1,75 @@
+{
+  "sessionId": "s_059738542da9f8e45bad2c3f",
+  "requestId": "demo-missing",
+  "owner": "local-user",
+  "version": 2,
+  "deliveryMode": "draft_only",
+  "items": [
+    {
+      "materialId": "M06",
+      "channel": "douyin",
+      "status": "needs_information",
+      "fsmState": "needs_information",
+      "reviewStatus": "needs_information",
+      "risks": [
+        {
+          "ruleId": "REQUIRED_TITLE",
+          "level": "missing",
+          "field": "title",
+          "evidence": "字段缺失或格式无效"
+        },
+        {
+          "ruleId": "RIGHTS_REQUIRED",
+          "level": "missing",
+          "field": "rights",
+          "evidence": "授权未知或格式无效，需要补充资料"
+        }
+      ],
+      "originalRequirement": {
+        "kind": "fixed",
+        "at": "2030-01-01T17:00:00+08:00"
+      },
+      "suggestedAt": null,
+      "approvedAt": null,
+      "pendingConfirmations": [],
+      "proposal": null,
+      "saveStatus": "not_saved",
+      "draft": null,
+      "currentConflicts": [],
+      "requiresRecheck": false,
+      "reason": "字段缺失或格式无效；授权未知或格式无效，需要补充资料"
+    }
+  ],
+  "transitions": [
+    {
+      "at": "2026-10-28T07:22:58.798Z",
+      "materialId": "M06",
+      "channel": "douyin",
+      "actor": "local-user",
+      "from": "checking",
+      "to": "needs_information",
+      "event": "information_required",
+      "reason": "字段缺失或格式无效；授权未知或格式无效，需要补充资料"
+    },
+    {
+      "at": "2026-10-28T07:22:58.800Z",
+      "materialId": "M06",
+      "channel": "douyin",
+      "actor": "local-user",
+      "from": "needs_information",
+      "to": "needs_information",
+      "event": "information_required",
+      "reason": "字段缺失或格式无效；授权未知或格式无效，需要补充资料"
+    }
+  ],
+  "confirmations": [],
+  "runId": "r_a28562c2-d56d-446d-ab2d-99fbac38610e",
+  "mode": "mock",
+  "mockBoundary": "离线 Mock 只验证流程，不证明真实模型决策效果",
+  "runStatus": "awaiting_input",
+  "error": null,
+  "decisions": 5,
+  "toolCalls": 5,
+  "durationMs": 14,
+  "tracePath": "examples/mock/02-missing/trace.jsonl"
+}

@@ -1,0 +1,40 @@
+{
+  "at": "2026-10-28T04:19:10.872Z",
+  "status": "smoke_verified",
+  "configured": true,
+  "model": "kimi-k2.6",
+  "parameters": {
+    "maxTokens": 1024,
+    "contextWindow": 262144,
+    "thinking": "disabled"
+  },
+  "scope": "工具说明细化前的真实运行：安全门禁通过，存在枚举误用恢复及候选偏好不一致；保留用于复盘",
+  "cases": [
+    {
+      "name": "smoke-normal",
+      "model": "kimi-k2.6",
+      "expectedStatus": "saved",
+      "actualStatus": "saved",
+      "runStatus": "completed",
+      "decisions": 5,
+      "toolCalls": 6,
+      "drafts": 1,
+      "passed": true,
+      "error": null,
+      "trace": "examples/live/iteration-01/smoke-normal/trace.jsonl"
+    },
+    {
+      "name": "smoke-conflict",
+      "model": "kimi-k2.6",
+      "expectedStatus": "needs_confirmation",
+      "actualStatus": "needs_confirmation",
+      "runStatus": "awaiting_input",
+      "decisions": 6,
+      "toolCalls": 6,
+      "drafts": 0,
+      "passed": true,
+      "error": null,
+      "trace": "examples/live/iteration-01/smoke-conflict/trace.jsonl"
+    }
+  ]
+}

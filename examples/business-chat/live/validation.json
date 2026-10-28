@@ -1,0 +1,10 @@
+{
+  "at": "2026-10-28T05:44:46.578Z",
+  "mode": "live",
+  "model": "kimi-k2.6",
+  "passed": true,
+  "businessOnlyResponse": true,
+  "drafts": 1,
+  "scope": "真实模型理解非命令式表达、解释冲突、夹具确认保存与重跑；HTTP 响应不含运行记录",
+  "confirmations": "程序夹具模拟，非真人审批"
+}

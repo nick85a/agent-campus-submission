@@ -1,0 +1,58 @@
+{
+  "beforeExplicitGrant": {
+    "material": {
+      "id": "M06",
+      "text": "资料待补充",
+      "rights": "unknown",
+      "version": 2,
+      "sources": [
+        {
+          "source": "chat-user-input",
+          "fields": [
+            "title"
+          ],
+          "at": "2026-10-28T07:21:40.747Z"
+        }
+      ],
+      "title": "双十一优惠"
+    },
+    "drafts": []
+  },
+  "afterExplicitGrant": {
+    "material": {
+      "id": "M06",
+      "text": "资料待补充",
+      "rights": "granted",
+      "version": 3,
+      "sources": [
+        {
+          "source": "chat-user-input",
+          "fields": [
+            "title"
+          ],
+          "at": "2026-10-28T07:21:40.747Z"
+        },
+        {
+          "source": "chat-user-input",
+          "fields": [
+            "rights"
+          ],
+          "at": "2026-10-28T07:21:49.810Z"
+        }
+      ],
+      "title": "双十一优惠"
+    },
+    "drafts": [
+      {
+        "id": "d_af875538-dc3c-4ca4-a8da-0125b2cda8aa",
+        "sessionId": "s_93e0dee3738e9d10f2cce5f0",
+        "materialId": "M06",
+        "channel": "douyin",
+        "at": "2026-11-02T17:00:00+08:00",
+        "materialVersion": 3,
+        "rulesHash": "ff3cd2f50eeea9b70f95ecae99198b5c7e961fee906c14589126849a38e3a667",
+        "createdAt": "2026-10-28T07:21:55.376Z"
+      }
+    ]
+  }
+}

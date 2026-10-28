@@ -1,0 +1,16 @@
+{
+  "checkedAt": "2026-10-28T08:17:27.081344+00:00",
+  "scope": "独立源码目录重新安装依赖后验证，未调用真实模型",
+  "typecheck": "passed",
+  "tests": {
+    "tests": 91,
+    "pass": 91,
+    "fail": 0
+  },
+  "node": "v22.22.2",
+  "gitMetadataIncluded": false,
+  "credentialsIncluded": false,
+  "runtimeDataIncluded": false,
+  "dependencyInstall": "npm ci --ignore-scripts --no-audit --no-fund",
+  "testCommand": "npm test"
+}

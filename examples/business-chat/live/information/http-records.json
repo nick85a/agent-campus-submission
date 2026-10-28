@@ -1,0 +1,104 @@
+{
+  "mode": "live",
+  "automatedFixture": true,
+  "note": "合成业务资料；确认操作由测试客户端模拟，不是真实人工审批",
+  "interactions": [
+    {
+      "request": {
+        "message": "想给 M06 安排一下",
+        "requestId": "start"
+      },
+      "response": {
+        "conversationId": "chat_e54ce279-6a8e-4148-9b7d-758046591ae4",
+        "message": "希望安排在哪一天？",
+        "status": "awaiting_input"
+      },
+      "status": 200
+    },
+    {
+      "request": {
+        "conversationId": "chat_e54ce279-6a8e-4148-9b7d-758046591ae4",
+        "message": "2030年1月1日",
+        "requestId": "date"
+      },
+      "response": {
+        "conversationId": "chat_e54ce279-6a8e-4148-9b7d-758046591ae4",
+        "message": "希望安排在几点？目前按整点安排。",
+        "status": "awaiting_input"
+      },
+      "status": 200
+    },
+    {
+      "request": {
+        "conversationId": "chat_e54ce279-6a8e-4148-9b7d-758046591ae4",
+        "message": "下午五点",
+        "requestId": "time"
+      },
+      "response": {
+        "conversationId": "chat_e54ce279-6a8e-4148-9b7d-758046591ae4",
+        "message": "M06：待补充信息。审核资料不足。\n原定时间：2030-01-01 17:00（上海时间）\n需要注意：字段缺失或格式无效；授权未知或格式无效，需要补充资料\n目前尚未保存或发布。",
+        "status": "awaiting_input",
+        "materials": [
+          {
+            "materialId": "M06",
+            "channel": "douyin",
+            "status": "needs_information",
+            "reviewStatus": "needs_information",
+            "risks": [
+              {
+                "level": "missing",
+                "reason": "字段缺失或格式无效"
+              },
+              {
+                "level": "missing",
+                "reason": "授权未知或格式无效，需要补充资料"
+              }
+            ],
+            "originalRequirement": {
+              "kind": "fixed",
+              "at": "2030-01-01T17:00:00+08:00"
+            },
+            "suggestedAt": null,
+            "pendingConfirmations": [],
+            "saveStatus": "not_saved",
+            "draft": null
+          }
+        ]
+      },
+      "status": 200
+    },
+    {
+      "request": {
+        "conversationId": "chat_e54ce279-6a8e-4148-9b7d-758046591ae4",
+        "message": "给 M06 补上标题“补充后的教程”，已经获得授权",
+        "requestId": "supplement"
+      },
+      "response": {
+        "conversationId": "chat_e54ce279-6a8e-4148-9b7d-758046591ae4",
+        "message": "M06：草稿已保存。审核通过。\n原定时间：2030-01-01 17:00（上海时间）\n建议时间：2030-01-01 17:00（上海时间）\n草稿凭据：d_bc5c4339-09e7-4e06-b4c6-885a8c211300，2030-01-01 17:00（上海时间）\n草稿已保存，尚未发布。",
+        "status": "completed",
+        "materials": [
+          {
+            "materialId": "M06",
+            "channel": "douyin",
+            "status": "saved",
+            "reviewStatus": "passed",
+            "risks": [],
+            "originalRequirement": {
+              "kind": "fixed",
+              "at": "2030-01-01T17:00:00+08:00"
+            },
+            "suggestedAt": "2030-01-01T17:00:00+08:00",
+            "pendingConfirmations": [],
+            "saveStatus": "saved",
+            "draft": {
+              "id": "d_bc5c4339-09e7-4e06-b4c6-885a8c211300",
+              "at": "2030-01-01T17:00:00+08:00"
+            }
+          }
+        ]
+      },
+      "status": 200
+    }
+  ]
+}

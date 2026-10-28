@@ -1,0 +1,100 @@
+{
+  "materials": [
+    {
+      "id": "M01",
+      "title": "新品介绍",
+      "text": "新品功能演示",
+      "rights": "granted",
+      "version": 1,
+      "sources": [
+        {
+          "source": "synthetic-catalog",
+          "fields": [
+            "title",
+            "text",
+            "rights"
+          ],
+          "at": "2030-01-01T00:00:00Z"
+        }
+      ]
+    },
+    {
+      "id": "M02",
+      "text": "使用教程",
+      "rights": "granted",
+      "version": 1,
+      "sources": []
+    },
+    {
+      "id": "M03",
+      "title": "活动推荐",
+      "text": "限时优惠，请核实价格",
+      "rights": "granted",
+      "version": 1,
+      "sources": []
+    },
+    {
+      "id": "M04",
+      "title": "授权失败示例",
+      "text": "转载片段",
+      "rights": "denied",
+      "version": 1,
+      "sources": []
+    },
+    {
+      "id": "M05",
+      "title": "功能教程",
+      "text": "教程演示",
+      "rights": "granted",
+      "version": 1,
+      "sources": []
+    },
+    {
+      "id": "M06",
+      "text": "资料待补充",
+      "rights": "unknown",
+      "version": 1,
+      "sources": []
+    },
+    {
+      "id": "M07",
+      "title": "禁止内容示例",
+      "text": "违禁演示词",
+      "rights": "granted",
+      "version": 1,
+      "sources": []
+    }
+  ],
+  "rules": {
+    "version": "synthetic-v1",
+    "timezone": "Asia/Shanghai",
+    "hours": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21
+    ],
+    "blockedTerms": [
+      "违禁演示词"
+    ],
+    "warningTerms": [
+      "限时优惠"
+    ]
+  },
+  "schedules": [
+    {
+      "channel": "douyin",
+      "at": "2030-01-01T18:00:00+08:00",
+      "materialId": "EXISTING01"
+    }
+  ]
+}

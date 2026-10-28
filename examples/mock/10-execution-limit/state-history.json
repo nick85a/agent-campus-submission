@@ -1,0 +1,12 @@
+[
+  {
+    "at": "2026-10-28T07:22:59.021Z",
+    "materialId": "M01",
+    "channel": "douyin",
+    "actor": "local-user",
+    "from": "checking",
+    "to": "checking",
+    "event": "assessment_started",
+    "reason": "审核通过，等待选择并校验时段"
+  }
+]

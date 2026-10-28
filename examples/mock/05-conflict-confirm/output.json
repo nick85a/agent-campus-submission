@@ -1,0 +1,75 @@
+{
+  "sessionId": "s_ff4fb67787dceefeecc32d0c",
+  "requestId": "demo-conflict",
+  "owner": "local-user",
+  "version": 3,
+  "deliveryMode": "draft_only",
+  "items": [
+    {
+      "materialId": "M01",
+      "channel": "douyin",
+      "status": "needs_confirmation",
+      "fsmState": "needs_confirmation",
+      "reviewStatus": "passed",
+      "risks": [],
+      "originalRequirement": {
+        "kind": "fixed",
+        "at": "2030-01-01T18:00:00+08:00"
+      },
+      "suggestedAt": "2030-01-01T19:00:00+08:00",
+      "approvedAt": null,
+      "pendingConfirmations": [
+        "time_change"
+      ],
+      "proposal": {
+        "id": "p_3a685819-abec-4a33-b9b7-df42f676912e",
+        "version": 1,
+        "at": "2030-01-01T19:00:00+08:00",
+        "materialVersion": 1,
+        "rulesHash": "ff3cd2f50eeea9b70f95ecae99198b5c7e961fee906c14589126849a38e3a667",
+        "kinds": [
+          "time_change"
+        ],
+        "warningIds": [],
+        "decision": "pending"
+      },
+      "saveStatus": "not_saved",
+      "draft": null,
+      "currentConflicts": [],
+      "requiresRecheck": false,
+      "reason": "需要本人确认：time_change"
+    }
+  ],
+  "transitions": [
+    {
+      "at": "2026-10-28T07:22:58.858Z",
+      "materialId": "M01",
+      "channel": "douyin",
+      "actor": "local-user",
+      "from": "checking",
+      "to": "checking",
+      "event": "assessment_started",
+      "reason": "审核通过，等待选择并校验时段"
+    },
+    {
+      "at": "2026-10-28T07:22:58.861Z",
+      "materialId": "M01",
+      "channel": "douyin",
+      "actor": "local-user",
+      "from": "checking",
+      "to": "needs_confirmation",
+      "event": "confirmation_requested",
+      "reason": "需要本人确认：time_change"
+    }
+  ],
+  "confirmations": [],
+  "runId": "r_acffca14-06dd-4726-8643-ef2ad4c1aa22",
+  "mode": "mock",
+  "mockBoundary": "离线 Mock 只验证流程，不证明真实模型决策效果",
+  "runStatus": "awaiting_input",
+  "error": null,
+  "decisions": 5,
+  "toolCalls": 5,
+  "durationMs": 11,
+  "tracePath": "examples/mock/05-conflict-confirm/trace.jsonl"
+}

@@ -1,0 +1,10 @@
+{
+  "at": "2026-10-28T07:07:45.640Z",
+  "mode": "live",
+  "model": "kimi-k2.6",
+  "passed": true,
+  "businessOnlyResponse": true,
+  "drafts": 1,
+  "scope": "省略当前素材ID补标题，含糊授权不自动通过；再次补标题仍保留17:00，明确已授权后才保存",
+  "confirmations": "此场景没有确认操作"
+}

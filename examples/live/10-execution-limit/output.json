@@ -1,0 +1,62 @@
+{
+  "sessionId": "s_444e45aa9171688c841de871",
+  "requestId": "demo-normal",
+  "owner": "local-user",
+  "version": 2,
+  "deliveryMode": "draft_only",
+  "items": [
+    {
+      "materialId": "M01",
+      "channel": "douyin",
+      "status": "ready",
+      "fsmState": "ready",
+      "reviewStatus": "passed",
+      "risks": [],
+      "originalRequirement": {
+        "kind": "fixed",
+        "at": "2030-01-01T17:00:00+08:00"
+      },
+      "suggestedAt": null,
+      "approvedAt": null,
+      "pendingConfirmations": [],
+      "proposal": null,
+      "saveStatus": "not_saved",
+      "draft": null,
+      "currentConflicts": [],
+      "requiresRecheck": false,
+      "reason": "存在符合要求、授权与占用校验的可保存时段"
+    }
+  ],
+  "transitions": [
+    {
+      "at": "2026-10-28T07:32:40.439Z",
+      "materialId": "M01",
+      "channel": "douyin",
+      "actor": "local-user",
+      "from": "checking",
+      "to": "checking",
+      "event": "assessment_started",
+      "reason": "审核通过，等待选择并校验时段"
+    },
+    {
+      "at": "2026-10-28T07:32:41.767Z",
+      "materialId": "M01",
+      "channel": "douyin",
+      "actor": "local-user",
+      "from": "checking",
+      "to": "ready",
+      "event": "checks_passed",
+      "reason": "存在符合要求、授权与占用校验的可保存时段"
+    }
+  ],
+  "confirmations": [],
+  "runId": "r_40d7c3d0-b3d1-445f-b488-f64df0a599dc",
+  "mode": "live",
+  "mockBoundary": null,
+  "runStatus": "incomplete",
+  "error": "EXECUTION_LIMIT：达到执行上限，任务未完成",
+  "decisions": 2,
+  "toolCalls": 3,
+  "durationMs": 3252,
+  "tracePath": "examples/live/10-execution-limit/trace.jsonl"
+}

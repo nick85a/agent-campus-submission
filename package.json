@@ -1,0 +1,36 @@
+{
+  "name": "content-scheduler-agent",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22.19.0" },
+  "scripts": {
+    "cli": "node --env-file-if-exists=.env --experimental-sqlite --import tsx src/cli.ts",
+    "api": "node --env-file-if-exists=.env --experimental-sqlite --import tsx src/http/main.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "node --experimental-sqlite --import tsx --test tests/*.test.ts",
+    "examples": "node --env-file-if-exists=.env --experimental-sqlite --import tsx scripts/examples.ts",
+    "verify": "node --import tsx scripts/verify.ts",
+    "smoke:live": "node --env-file-if-exists=.env --experimental-sqlite --import tsx scripts/live-smoke.ts",
+    "examples:chat": "node --env-file-if-exists=.env --experimental-sqlite --import tsx scripts/chat-examples.ts",
+    "smoke:chat": "node --env-file-if-exists=.env --experimental-sqlite --import tsx scripts/chat-examples.ts --mode live",
+    "smoke:terminal-recovery": "node --env-file-if-exists=.env --experimental-sqlite --import tsx scripts/terminal-recovery-example.ts",
+    "examples:business-chat": "node --env-file-if-exists=.env --experimental-sqlite --import tsx scripts/business-chat-examples.ts",
+    "smoke:business-chat": "node --env-file-if-exists=.env --experimental-sqlite --import tsx scripts/business-chat-examples.ts --mode live"
+  },
+  "dependencies": {
+    "@earendil-works/pi-coding-agent": "1.0.2",
+    "@earendil-works/pi-ai": "1.0.2",
+    "typebox": "1.3.27",
+    "tsx": "4.23.15"
+  },
+  "devDependencies": { "@types/node": "22.19.15", "typescript": "5.9.3" },
+  "overrides": {
+    "@earendil-works/pi-agent-core": "1.0.2",
+    "@earendil-works/chord": "1.0.2",
+    "@earendil-works/pi-codemode": "1.0.2",
+    "@earendil-works/pi-mcp": "1.0.2",
+    "@earendil-works/pi-tui": "1.0.2",
+    "undici": "8.12.2"
+  }
+}

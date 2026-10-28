@@ -1,0 +1,122 @@
+{
+  "sessionId": "s_ff4fb67787dceefeecc32d0c",
+  "requestId": "demo-conflict",
+  "owner": "local-user",
+  "version": 5,
+  "deliveryMode": "draft_only",
+  "items": [
+    {
+      "materialId": "M01",
+      "channel": "douyin",
+      "status": "saved",
+      "fsmState": "saved",
+      "reviewStatus": "passed",
+      "risks": [],
+      "originalRequirement": {
+        "kind": "fixed",
+        "at": "2030-01-01T18:00:00+08:00"
+      },
+      "suggestedAt": "2030-01-01T18:00:00+08:00",
+      "approvedAt": null,
+      "pendingConfirmations": [],
+      "proposal": {
+        "id": "p_eb0d5939-d6dd-41c8-9bd2-7ee1717d7e2e",
+        "version": 1,
+        "at": "2030-01-01T19:00:00+08:00",
+        "materialVersion": 1,
+        "rulesHash": "ff3cd2f50eeea9b70f95ecae99198b5c7e961fee906c14589126849a38e3a667",
+        "kinds": [
+          "time_change"
+        ],
+        "warningIds": [],
+        "decision": "invalidated"
+      },
+      "saveStatus": "saved",
+      "draft": {
+        "id": "d_68d7e5b2-3030-46f0-aca8-68fe6ef0d8c1",
+        "sessionId": "s_ff4fb67787dceefeecc32d0c",
+        "materialId": "M01",
+        "channel": "douyin",
+        "at": "2030-01-01T18:00:00+08:00",
+        "materialVersion": 1,
+        "rulesHash": "ff3cd2f50eeea9b70f95ecae99198b5c7e961fee906c14589126849a38e3a667",
+        "createdAt": "2026-10-28T07:32:36.136Z"
+      },
+      "currentConflicts": [],
+      "requiresRecheck": false,
+      "reason": "草稿已保存；未执行发布"
+    }
+  ],
+  "transitions": [
+    {
+      "at": "2026-10-28T07:32:26.932Z",
+      "materialId": "M01",
+      "channel": "douyin",
+      "actor": "local-user",
+      "from": "checking",
+      "to": "checking",
+      "event": "assessment_started",
+      "reason": "审核通过，等待选择并校验时段"
+    },
+    {
+      "at": "2026-10-28T07:32:29.517Z",
+      "materialId": "M01",
+      "channel": "douyin",
+      "actor": "local-user",
+      "from": "checking",
+      "to": "needs_confirmation",
+      "event": "confirmation_requested",
+      "reason": "需要本人确认：time_change"
+    },
+    {
+      "at": "2026-10-28T07:32:34.097Z",
+      "materialId": "M01",
+      "channel": "douyin",
+      "actor": "local-user",
+      "from": "needs_confirmation",
+      "to": "ready",
+      "event": "checks_passed",
+      "reason": "存在符合要求、授权与占用校验的可保存时段"
+    },
+    {
+      "at": "2026-10-28T07:32:36.135Z",
+      "materialId": "M01",
+      "channel": "douyin",
+      "actor": "local-user",
+      "from": "ready",
+      "to": "ready",
+      "event": "checks_passed",
+      "reason": "保存前审核、授权和时段复检通过"
+    },
+    {
+      "at": "2026-10-28T07:32:36.136Z",
+      "materialId": "M01",
+      "channel": "douyin",
+      "actor": "local-user",
+      "from": "ready",
+      "to": "saving",
+      "event": "save_started",
+      "reason": "开始事务保存排期草稿"
+    },
+    {
+      "at": "2026-10-28T07:32:36.137Z",
+      "materialId": "M01",
+      "channel": "douyin",
+      "actor": "local-user",
+      "from": "saving",
+      "to": "saved",
+      "event": "save_succeeded",
+      "reason": "草稿已保存；未执行发布"
+    }
+  ],
+  "confirmations": [],
+  "runId": "r_52191a06-2692-40b4-b102-5e64c8714594",
+  "mode": "live",
+  "mockBoundary": null,
+  "runStatus": "completed",
+  "error": null,
+  "decisions": 4,
+  "toolCalls": 4,
+  "durationMs": 7246,
+  "tracePath": "examples/live/09-changed-occupancy/after-change.trace.jsonl"
+}

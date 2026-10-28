@@ -1,0 +1,10 @@
+{
+  "at": "2026-10-28T07:23:00.754Z",
+  "mode": "mock",
+  "model": "deterministic-mock-v1",
+  "passed": true,
+  "businessOnlyResponse": true,
+  "drafts": 1,
+  "scope": "仅验证业务流程和接口边界，不证明真实语言理解",
+  "confirmations": "程序夹具模拟，非真人审批"
+}

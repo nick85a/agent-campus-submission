@@ -1,0 +1,26 @@
+{
+  "at": "2026-10-28T07:22:59.942Z",
+  "mode": "mock",
+  "model": "deterministic-mock-v1",
+  "boundary": "只证明流程；离线语言入口使用确定性解析",
+  "cases": [
+    {
+      "name": "01-conflict-confirm",
+      "passed": true,
+      "drafts": 1,
+      "trace": "examples/chat/mock/01-conflict-confirm/trace.jsonl"
+    },
+    {
+      "name": "02-information",
+      "passed": true,
+      "drafts": 1,
+      "trace": "examples/chat/mock/02-information/trace.jsonl"
+    },
+    {
+      "name": "03-save-failure",
+      "passed": true,
+      "drafts": 1,
+      "trace": "examples/chat/mock/03-save-failure/trace.jsonl"
+    }
+  ]
+}

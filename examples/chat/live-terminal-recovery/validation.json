@@ -1,0 +1,14 @@
+{
+  "at": "2026-10-28T07:21:58.457Z",
+  "mode": "live",
+  "model": "kimi-k2.6",
+  "passed": true,
+  "cliProcesses": 3,
+  "sameNativePiSession": true,
+  "nativeSessionId": "01a18162-9053-723e-87d5-c007ce02b953",
+  "businessSessions": 1,
+  "drafts": 1,
+  "expectedAt": "2026-11-02T17:00:00+08:00",
+  "syntheticData": true,
+  "automatedFixture": true
+}

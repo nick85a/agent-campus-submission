@@ -1,0 +1,21 @@
+{
+  "requestId": "demo-batch",
+  "items": [
+    {
+      "materialId": "M01",
+      "channel": "douyin",
+      "requirement": {
+        "kind": "fixed",
+        "at": "2030-01-01T18:00:00+08:00"
+      }
+    },
+    {
+      "materialId": "M05",
+      "channel": "douyin",
+      "requirement": {
+        "kind": "fixed",
+        "at": "2030-01-01T18:00:00+08:00"
+      }
+    }
+  ]
+}

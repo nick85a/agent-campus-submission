@@ -1,0 +1,10 @@
+{
+  "at": "2026-10-28T05:42:35.908Z",
+  "mode": "live",
+  "model": "kimi-k2.6",
+  "passed": true,
+  "businessOnlyResponse": true,
+  "drafts": 1,
+  "scope": "真实模型逐轮理解素材、日期、中文时间与授权补充，重新审核后保存；HTTP 响应不含运行记录",
+  "confirmations": "此场景没有确认操作"
+}

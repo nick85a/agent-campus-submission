@@ -1,0 +1,129 @@
+{
+  "sessionId": "s_09a63bcd45e1e6787e25ae4e",
+  "requestId": "demo-batch",
+  "owner": "local-user",
+  "version": 6,
+  "deliveryMode": "draft_only",
+  "items": [
+    {
+      "materialId": "M01",
+      "channel": "douyin",
+      "status": "needs_confirmation",
+      "fsmState": "needs_confirmation",
+      "reviewStatus": "passed",
+      "risks": [],
+      "originalRequirement": {
+        "kind": "fixed",
+        "at": "2030-01-01T18:00:00+08:00"
+      },
+      "suggestedAt": "2030-01-01T19:00:00+08:00",
+      "approvedAt": null,
+      "pendingConfirmations": [
+        "time_change"
+      ],
+      "proposal": {
+        "id": "p_b234307f-7037-4b26-8f12-4f1e139d15d2",
+        "version": 1,
+        "at": "2030-01-01T19:00:00+08:00",
+        "materialVersion": 1,
+        "rulesHash": "ff3cd2f50eeea9b70f95ecae99198b5c7e961fee906c14589126849a38e3a667",
+        "kinds": [
+          "time_change"
+        ],
+        "warningIds": [],
+        "decision": "pending"
+      },
+      "saveStatus": "not_saved",
+      "draft": null,
+      "currentConflicts": [],
+      "requiresRecheck": false,
+      "reason": "需要本人确认：time_change"
+    },
+    {
+      "materialId": "M05",
+      "channel": "douyin",
+      "status": "needs_confirmation",
+      "fsmState": "needs_confirmation",
+      "reviewStatus": "passed",
+      "risks": [],
+      "originalRequirement": {
+        "kind": "fixed",
+        "at": "2030-01-01T18:00:00+08:00"
+      },
+      "suggestedAt": "2030-01-01T20:00:00+08:00",
+      "approvedAt": null,
+      "pendingConfirmations": [
+        "time_change"
+      ],
+      "proposal": {
+        "id": "p_65f8c673-32f6-4ba0-96ca-fa5a605bf970",
+        "version": 1,
+        "at": "2030-01-01T20:00:00+08:00",
+        "materialVersion": 1,
+        "rulesHash": "ff3cd2f50eeea9b70f95ecae99198b5c7e961fee906c14589126849a38e3a667",
+        "kinds": [
+          "time_change"
+        ],
+        "warningIds": [],
+        "decision": "pending"
+      },
+      "saveStatus": "not_saved",
+      "draft": null,
+      "currentConflicts": [],
+      "requiresRecheck": false,
+      "reason": "需要本人确认：time_change"
+    }
+  ],
+  "transitions": [
+    {
+      "at": "2026-10-28T07:32:43.676Z",
+      "materialId": "M01",
+      "channel": "douyin",
+      "actor": "local-user",
+      "from": "checking",
+      "to": "checking",
+      "event": "assessment_started",
+      "reason": "审核通过，等待选择并校验时段"
+    },
+    {
+      "at": "2026-10-28T07:32:46.942Z",
+      "materialId": "M01",
+      "channel": "douyin",
+      "actor": "local-user",
+      "from": "checking",
+      "to": "needs_confirmation",
+      "event": "confirmation_requested",
+      "reason": "需要本人确认：time_change"
+    },
+    {
+      "at": "2026-10-28T07:32:51.934Z",
+      "materialId": "M05",
+      "channel": "douyin",
+      "actor": "local-user",
+      "from": "checking",
+      "to": "checking",
+      "event": "assessment_started",
+      "reason": "审核通过，等待选择并校验时段"
+    },
+    {
+      "at": "2026-10-28T07:32:55.664Z",
+      "materialId": "M05",
+      "channel": "douyin",
+      "actor": "local-user",
+      "from": "checking",
+      "to": "needs_confirmation",
+      "event": "confirmation_requested",
+      "reason": "需要本人确认：time_change"
+    }
+  ],
+  "confirmations": [],
+  "runId": "r_9a4fc9e2-2647-45b4-ba85-5a2f231f7770",
+  "mode": "live",
+  "mockBoundary": null,
+  "runStatus": "awaiting_input",
+  "error": null,
+  "decisions": 9,
+  "toolCalls": 11,
+  "durationMs": 15504,
+  "tracePath": "examples/live/11-batch/trace.jsonl"
+}

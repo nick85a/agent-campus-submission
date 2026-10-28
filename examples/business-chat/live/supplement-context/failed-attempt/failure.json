@@ -1,0 +1,8 @@
+{
+  "passed": false,
+  "failedAssertion": "第二次输入“素材为双十一优惠”后，原排期的 materials DTO 丢失",
+  "actualObservation": "模型选择 supplement 但只提供素材标题；缺字段错误被误计为新排期输入，遮蔽当前业务状态",
+  "fix": "单独区分补资料澄清与新排期追问，保留当前素材、时间及未知授权",
+  "mode": "live",
+  "syntheticData": true
+}

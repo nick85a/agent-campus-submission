@@ -1,0 +1,139 @@
+{
+  "mode": "mock",
+  "automatedFixture": true,
+  "passed": true,
+  "drafts": [
+    {
+      "id": "d_bd12465c-5adc-4b7c-83fd-54e449ec533c",
+      "sessionId": "s_dc7147b883f5fcd8c4627df0",
+      "materialId": "M06",
+      "channel": "douyin",
+      "at": "2030-01-01T17:00:00+08:00",
+      "materialVersion": 2,
+      "rulesHash": "ff3cd2f50eeea9b70f95ecae99198b5c7e961fee906c14589126849a38e3a667",
+      "createdAt": "2026-10-28T07:22:59.908Z"
+    }
+  ],
+  "latest": {
+    "sessionId": "s_dc7147b883f5fcd8c4627df0",
+    "requestId": "auto_67f9589f6eacf0604229e8da11efeb01c17c77dec344d4528971166500477320",
+    "owner": "local-user",
+    "version": 6,
+    "deliveryMode": "draft_only",
+    "items": [
+      {
+        "materialId": "M06",
+        "channel": "douyin",
+        "status": "saved",
+        "fsmState": "saved",
+        "reviewStatus": "passed",
+        "risks": [],
+        "originalRequirement": {
+          "kind": "fixed",
+          "at": "2030-01-01T17:00:00+08:00"
+        },
+        "suggestedAt": "2030-01-01T17:00:00+08:00",
+        "approvedAt": null,
+        "pendingConfirmations": [],
+        "proposal": null,
+        "saveStatus": "saved",
+        "draft": {
+          "id": "d_bd12465c-5adc-4b7c-83fd-54e449ec533c",
+          "sessionId": "s_dc7147b883f5fcd8c4627df0",
+          "materialId": "M06",
+          "channel": "douyin",
+          "at": "2030-01-01T17:00:00+08:00",
+          "materialVersion": 2,
+          "rulesHash": "ff3cd2f50eeea9b70f95ecae99198b5c7e961fee906c14589126849a38e3a667",
+          "createdAt": "2026-10-28T07:22:59.908Z"
+        },
+        "currentConflicts": [],
+        "requiresRecheck": false,
+        "reason": "草稿已保存；未执行发布"
+      }
+    ],
+    "transitions": [
+      {
+        "at": "2026-10-28T07:22:59.893Z",
+        "materialId": "M06",
+        "channel": "douyin",
+        "actor": "local-user",
+        "from": "checking",
+        "to": "needs_information",
+        "event": "information_required",
+        "reason": "字段缺失或格式无效；授权未知或格式无效，需要补充资料"
+      },
+      {
+        "at": "2026-10-28T07:22:59.896Z",
+        "materialId": "M06",
+        "channel": "douyin",
+        "actor": "local-user",
+        "from": "needs_information",
+        "to": "needs_information",
+        "event": "information_required",
+        "reason": "字段缺失或格式无效；授权未知或格式无效，需要补充资料"
+      },
+      {
+        "at": "2026-10-28T07:22:59.899Z",
+        "materialId": "M06",
+        "channel": "douyin",
+        "actor": "local-user",
+        "from": "needs_information",
+        "to": "checking",
+        "event": "material_updated",
+        "reason": "资料已更新，等待重新审核"
+      },
+      {
+        "at": "2026-10-28T07:22:59.906Z",
+        "materialId": "M06",
+        "channel": "douyin",
+        "actor": "local-user",
+        "from": "checking",
+        "to": "checking",
+        "event": "assessment_started",
+        "reason": "审核通过，等待选择并校验时段"
+      },
+      {
+        "at": "2026-10-28T07:22:59.907Z",
+        "materialId": "M06",
+        "channel": "douyin",
+        "actor": "local-user",
+        "from": "checking",
+        "to": "ready",
+        "event": "checks_passed",
+        "reason": "存在符合要求、授权与占用校验的可保存时段"
+      },
+      {
+        "at": "2026-10-28T07:22:59.908Z",
+        "materialId": "M06",
+        "channel": "douyin",
+        "actor": "local-user",
+        "from": "ready",
+        "to": "ready",
+        "event": "checks_passed",
+        "reason": "保存前审核、授权和时段复检通过"
+      },
+      {
+        "at": "2026-10-28T07:22:59.908Z",
+        "materialId": "M06",
+        "channel": "douyin",
+        "actor": "local-user",
+        "from": "ready",
+        "to": "saving",
+        "event": "save_started",
+        "reason": "开始事务保存排期草稿"
+      },
+      {
+        "at": "2026-10-28T07:22:59.908Z",
+        "materialId": "M06",
+        "channel": "douyin",
+        "actor": "local-user",
+        "from": "saving",
+        "to": "saved",
+        "event": "save_succeeded",
+        "reason": "草稿已保存；未执行发布"
+      }
+    ],
+    "confirmations": []
+  }
+}

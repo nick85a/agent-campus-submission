@@ -1,0 +1,72 @@
+[
+  {
+    "at": "2026-10-28T07:30:38.259Z",
+    "materialId": "M06",
+    "channel": "douyin",
+    "actor": "local-user",
+    "from": "checking",
+    "to": "needs_information",
+    "event": "information_required",
+    "reason": "字段缺失或格式无效；授权未知或格式无效，需要补充资料"
+  },
+  {
+    "at": "2026-10-28T07:30:41.724Z",
+    "materialId": "M06",
+    "channel": "douyin",
+    "actor": "local-user",
+    "from": "needs_information",
+    "to": "checking",
+    "event": "material_updated",
+    "reason": "资料已更新，等待重新审核"
+  },
+  {
+    "at": "2026-10-28T07:30:43.957Z",
+    "materialId": "M06",
+    "channel": "douyin",
+    "actor": "local-user",
+    "from": "checking",
+    "to": "checking",
+    "event": "assessment_started",
+    "reason": "审核通过，等待选择并校验时段"
+  },
+  {
+    "at": "2026-10-28T07:30:45.308Z",
+    "materialId": "M06",
+    "channel": "douyin",
+    "actor": "local-user",
+    "from": "checking",
+    "to": "ready",
+    "event": "checks_passed",
+    "reason": "存在符合要求、授权与占用校验的可保存时段"
+  },
+  {
+    "at": "2026-10-28T07:30:47.382Z",
+    "materialId": "M06",
+    "channel": "douyin",
+    "actor": "local-user",
+    "from": "ready",
+    "to": "ready",
+    "event": "checks_passed",
+    "reason": "保存前审核、授权和时段复检通过"
+  },
+  {
+    "at": "2026-10-28T07:30:47.383Z",
+    "materialId": "M06",
+    "channel": "douyin",
+    "actor": "local-user",
+    "from": "ready",
+    "to": "saving",
+    "event": "save_started",
+    "reason": "开始事务保存排期草稿"
+  },
+  {
+    "at": "2026-10-28T07:30:47.384Z",
+    "materialId": "M06",
+    "channel": "douyin",
+    "actor": "local-user",
+    "from": "saving",
+    "to": "saved",
+    "event": "save_succeeded",
+    "reason": "草稿已保存；未执行发布"
+  }
+]

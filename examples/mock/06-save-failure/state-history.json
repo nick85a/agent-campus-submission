@@ -1,0 +1,92 @@
+[
+  {
+    "at": "2026-10-28T07:22:58.929Z",
+    "materialId": "M01",
+    "channel": "douyin",
+    "actor": "local-user",
+    "from": "checking",
+    "to": "checking",
+    "event": "assessment_started",
+    "reason": "审核通过，等待选择并校验时段"
+  },
+  {
+    "at": "2026-10-28T07:22:58.931Z",
+    "materialId": "M01",
+    "channel": "douyin",
+    "actor": "local-user",
+    "from": "checking",
+    "to": "ready",
+    "event": "checks_passed",
+    "reason": "存在符合要求、授权与占用校验的可保存时段"
+  },
+  {
+    "at": "2026-10-28T07:22:58.932Z",
+    "materialId": "M01",
+    "channel": "douyin",
+    "actor": "local-user",
+    "from": "ready",
+    "to": "save_failed",
+    "event": "save_failed",
+    "reason": "草稿保存失败，未产生新记录；可使用 retry 重试"
+  },
+  {
+    "at": "2026-10-28T07:22:58.934Z",
+    "materialId": "M01",
+    "channel": "douyin",
+    "actor": "local-user",
+    "from": "save_failed",
+    "to": "save_failed",
+    "event": "save_failed",
+    "reason": "草稿保存失败，未产生新记录；可使用 retry 重试"
+  },
+  {
+    "at": "2026-10-28T07:22:58.943Z",
+    "materialId": "M01",
+    "channel": "douyin",
+    "actor": "local-user",
+    "from": "save_failed",
+    "to": "checking",
+    "event": "assessment_started",
+    "reason": "审核通过，等待选择并校验时段"
+  },
+  {
+    "at": "2026-10-28T07:22:58.944Z",
+    "materialId": "M01",
+    "channel": "douyin",
+    "actor": "local-user",
+    "from": "checking",
+    "to": "ready",
+    "event": "checks_passed",
+    "reason": "存在符合要求、授权与占用校验的可保存时段"
+  },
+  {
+    "at": "2026-10-28T07:22:58.945Z",
+    "materialId": "M01",
+    "channel": "douyin",
+    "actor": "local-user",
+    "from": "ready",
+    "to": "ready",
+    "event": "checks_passed",
+    "reason": "保存前审核、授权和时段复检通过"
+  },
+  {
+    "at": "2026-10-28T07:22:58.945Z",
+    "materialId": "M01",
+    "channel": "douyin",
+    "actor": "local-user",
+    "from": "ready",
+    "to": "saving",
+    "event": "save_started",
+    "reason": "开始事务保存排期草稿"
+  },
+  {
+    "at": "2026-10-28T07:22:58.945Z",
+    "materialId": "M01",
+    "channel": "douyin",
+    "actor": "local-user",
+    "from": "saving",
+    "to": "saved",
+    "event": "save_succeeded",
+    "reason": "草稿已保存；未执行发布"
+  }
+]

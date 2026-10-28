@@ -1,0 +1,96 @@
+{
+  "mode": "live",
+  "automatedFixture": true,
+  "note": "合成业务资料；确认操作由测试客户端模拟，不是真实人工审批",
+  "interactions": [
+    {
+      "request": {
+        "message": "安排 M06 2030-01-01 17:00",
+        "requestId": "start"
+      },
+      "response": {
+        "conversationId": "chat_615d837f-21b6-46cf-b091-ab4a235f8391",
+        "message": "M06：待补充信息。审核资料不足。\n原定时间：2030-01-01 17:00（上海时间）\n需要注意：标题：字段缺失或格式无效；授权状态：授权未知或格式无效，需要补充资料\n请补充标题，可以直接回复字段内容，无需重复素材和排期时间。\n请明确授权状态：“已授权”“未授权”或“未确认”；仅说“授权”还无法确定。\n目前尚未保存或发布。",
+        "status": "awaiting_input",
+        "materials": [
+          {
+            "materialId": "M06",
+            "channel": "douyin",
+            "status": "needs_information",
+            "reviewStatus": "needs_information",
+            "risks": [
+              {
+                "level": "missing",
+                "field": "title",
+                "reason": "字段缺失或格式无效"
+              },
+              {
+                "level": "missing",
+                "field": "rights",
+                "reason": "授权未知或格式无效，需要补充资料"
+              }
+            ],
+            "originalRequirement": {
+              "kind": "fixed",
+              "at": "2030-01-01T17:00:00+08:00"
+            },
+            "suggestedAt": null,
+            "pendingConfirmations": [],
+            "saveStatus": "not_saved",
+            "draft": null
+          }
+        ]
+      },
+      "status": 200
+    },
+    {
+      "request": {
+        "conversationId": "chat_615d837f-21b6-46cf-b091-ab4a235f8391",
+        "message": "标题叫做双十一优惠 授权",
+        "requestId": "title"
+      },
+      "response": {
+        "conversationId": "chat_615d837f-21b6-46cf-b091-ab4a235f8391",
+        "message": "已记录 M06 的标题，重新审核结果如下：\nM06：待补充信息。审核资料不足。\n原定时间：2030-01-01 17:00（上海时间）\n需要注意：授权状态：授权未知或格式无效，需要补充资料\n请明确授权状态：“已授权”“未授权”或“未确认”；仅说“授权”还无法确定。\n目前尚未保存或发布。",
+        "status": "awaiting_input",
+        "materials": [
+          {
+            "materialId": "M06",
+            "channel": "douyin",
+            "status": "needs_information",
+            "reviewStatus": "needs_information",
+            "risks": [
+              {
+                "level": "missing",
+                "field": "rights",
+                "reason": "授权未知或格式无效，需要补充资料"
+              }
+            ],
+            "originalRequirement": {
+              "kind": "fixed",
+              "at": "2030-01-01T17:00:00+08:00"
+            },
+            "suggestedAt": null,
+            "pendingConfirmations": [],
+            "saveStatus": "not_saved",
+            "draft": null
+          }
+        ]
+      },
+      "status": 200
+    },
+    {
+      "request": {
+        "conversationId": "chat_615d837f-21b6-46cf-b091-ab4a235f8391",
+        "message": "素材为双十一优惠",
+        "requestId": "title-again"
+      },
+      "response": {
+        "conversationId": "chat_615d837f-21b6-46cf-b091-ab4a235f8391",
+        "message": "请告诉我要补充的标题、内容或明确授权状态。",
+        "status": "awaiting_input"
+      },
+      "status": 200
+    }
+  ]
+}

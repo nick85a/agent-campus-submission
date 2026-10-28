@@ -1,0 +1,5 @@
+
+> content-scheduler-agent@1.0.0 examples
+> node --env-file-if-exists=.env --experimental-sqlite --import tsx scripts/examples.ts
+
+已生成 11 组 mock 输入、实际输出、Trace 与存储结果：examples/mock

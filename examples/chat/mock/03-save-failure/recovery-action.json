@@ -1,0 +1,4 @@
+{
+  "automatedFixture": true,
+  "action": "恢复故障注入，使存储可用，再从原会话重试"
+}

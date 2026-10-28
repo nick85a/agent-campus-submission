@@ -1,0 +1,22 @@
+[
+  {
+    "at": "2026-10-28T07:30:51.045Z",
+    "materialId": "M03",
+    "channel": "douyin",
+    "actor": "local-user",
+    "from": "checking",
+    "to": "checking",
+    "event": "assessment_started",
+    "reason": "需本人复核的合成警告：限时优惠"
+  },
+  {
+    "at": "2026-10-28T07:30:54.680Z",
+    "materialId": "M03",
+    "channel": "douyin",
+    "actor": "local-user",
+    "from": "checking",
+    "to": "needs_confirmation",
+    "event": "confirmation_requested",
+    "reason": "需要本人确认：risk_ack"
+  }
+]

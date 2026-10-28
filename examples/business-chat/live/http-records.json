@@ -1,0 +1,195 @@
+{
+  "mode": "live",
+  "automatedFixture": true,
+  "note": "合成业务资料；确认操作由测试客户端模拟，不是真实人工审批",
+  "interactions": [
+    {
+      "request": {
+        "message": "把新品介绍放到2030年1月1日晚上六点，发抖音，帮我安排一下",
+        "requestId": "schedule"
+      },
+      "response": {
+        "conversationId": "chat_9ae5bbf8-af6d-48a6-874e-0a95b2a57389",
+        "message": "M01：待本人确认。审核通过。\n原定时间：2030-01-01 18:00（上海时间）\n建议时间：2030-01-01 19:00（上海时间）\n需要你确认：时间变更，建议时间为 2030-01-01 19:00（上海时间）。\n确认时间变更请输入“同意改期”。\n拒绝请输入“拒绝当前建议”。\n目前尚未保存或发布。",
+        "status": "awaiting_input",
+        "materials": [
+          {
+            "materialId": "M01",
+            "channel": "douyin",
+            "status": "needs_confirmation",
+            "reviewStatus": "passed",
+            "risks": [],
+            "originalRequirement": {
+              "kind": "fixed",
+              "at": "2030-01-01T18:00:00+08:00"
+            },
+            "suggestedAt": "2030-01-01T19:00:00+08:00",
+            "pendingConfirmations": [
+              "time_change"
+            ],
+            "saveStatus": "not_saved",
+            "draft": null
+          }
+        ],
+        "confirmation": {
+          "id": "confirm_2f0da6f0-200c-4cce-9368-1d345555d469",
+          "materialId": "M01",
+          "channel": "douyin",
+          "proposedAt": "2030-01-01T19:00:00+08:00",
+          "requiredApprovals": [
+            "time_change"
+          ],
+          "risks": []
+        }
+      },
+      "status": 200
+    },
+    {
+      "request": {
+        "conversationId": "chat_9ae5bbf8-af6d-48a6-874e-0a95b2a57389",
+        "message": "怎么没有按我说的六点排呢？",
+        "requestId": "explain"
+      },
+      "response": {
+        "conversationId": "chat_9ae5bbf8-af6d-48a6-874e-0a95b2a57389",
+        "message": "原要求 2030-01-01 18:00（上海时间） 已有其他素材安排：EXISTING01。\n当前优先候选：2030-01-01 19:00（上海时间）、2030-01-01 20:00（上海时间）、2030-01-01 21:00（上海时间）。\n改动原定时间需要你同意。\nM01：待本人确认。审核通过。\n原定时间：2030-01-01 18:00（上海时间）\n建议时间：2030-01-01 19:00（上海时间）\n需要你确认：时间变更，建议时间为 2030-01-01 19:00（上海时间）。\n确认时间变更请输入“同意改期”。\n拒绝请输入“拒绝当前建议”。\n目前尚未保存或发布。",
+        "status": "awaiting_input",
+        "materials": [
+          {
+            "materialId": "M01",
+            "channel": "douyin",
+            "status": "needs_confirmation",
+            "reviewStatus": "passed",
+            "risks": [],
+            "originalRequirement": {
+              "kind": "fixed",
+              "at": "2030-01-01T18:00:00+08:00"
+            },
+            "suggestedAt": "2030-01-01T19:00:00+08:00",
+            "pendingConfirmations": [
+              "time_change"
+            ],
+            "saveStatus": "not_saved",
+            "draft": null
+          }
+        ],
+        "confirmation": {
+          "id": "confirm_2f0da6f0-200c-4cce-9368-1d345555d469",
+          "materialId": "M01",
+          "channel": "douyin",
+          "proposedAt": "2030-01-01T19:00:00+08:00",
+          "requiredApprovals": [
+            "time_change"
+          ],
+          "risks": []
+        }
+      },
+      "status": 200
+    },
+    {
+      "request": {
+        "conversationId": "chat_9ae5bbf8-af6d-48a6-874e-0a95b2a57389",
+        "action": {
+          "confirmationId": "confirm_2f0da6f0-200c-4cce-9368-1d345555d469",
+          "decision": "accept",
+          "kinds": [
+            "time_change"
+          ]
+        },
+        "requestId": "confirm"
+      },
+      "response": {
+        "conversationId": "chat_9ae5bbf8-af6d-48a6-874e-0a95b2a57389",
+        "message": "M01：草稿已保存。审核通过。\n原定时间：2030-01-01 18:00（上海时间）\n建议时间：2030-01-01 19:00（上海时间）\n草稿凭据：d_8954b2eb-66fc-4cc9-a925-0f53f8559057，2030-01-01 19:00（上海时间）\n草稿已保存，尚未发布。",
+        "status": "completed",
+        "materials": [
+          {
+            "materialId": "M01",
+            "channel": "douyin",
+            "status": "saved",
+            "reviewStatus": "passed",
+            "risks": [],
+            "originalRequirement": {
+              "kind": "fixed",
+              "at": "2030-01-01T18:00:00+08:00"
+            },
+            "suggestedAt": "2030-01-01T19:00:00+08:00",
+            "pendingConfirmations": [],
+            "saveStatus": "saved",
+            "draft": {
+              "id": "d_8954b2eb-66fc-4cc9-a925-0f53f8559057",
+              "at": "2030-01-01T19:00:00+08:00"
+            }
+          }
+        ]
+      },
+      "status": 200
+    },
+    {
+      "request": {
+        "conversationId": "chat_9ae5bbf8-af6d-48a6-874e-0a95b2a57389",
+        "message": "刚才那条再提交一次，别生成重复的草稿",
+        "requestId": "repeat"
+      },
+      "response": {
+        "conversationId": "chat_9ae5bbf8-af6d-48a6-874e-0a95b2a57389",
+        "message": "M01：草稿已保存。审核通过。\n原定时间：2030-01-01 18:00（上海时间）\n建议时间：2030-01-01 19:00（上海时间）\n已返回原草稿，没有重复保存。\n草稿凭据：d_8954b2eb-66fc-4cc9-a925-0f53f8559057，2030-01-01 19:00（上海时间）\n草稿已保存，尚未发布。",
+        "status": "completed",
+        "materials": [
+          {
+            "materialId": "M01",
+            "channel": "douyin",
+            "status": "saved",
+            "reviewStatus": "passed",
+            "risks": [],
+            "originalRequirement": {
+              "kind": "fixed",
+              "at": "2030-01-01T18:00:00+08:00"
+            },
+            "suggestedAt": "2030-01-01T19:00:00+08:00",
+            "pendingConfirmations": [],
+            "saveStatus": "existing",
+            "draft": {
+              "id": "d_8954b2eb-66fc-4cc9-a925-0f53f8559057",
+              "at": "2030-01-01T19:00:00+08:00"
+            }
+          }
+        ]
+      },
+      "status": 200
+    },
+    {
+      "request": {
+        "conversationId": "chat_9ae5bbf8-af6d-48a6-874e-0a95b2a57389",
+        "message": "/trace",
+        "requestId": "business-boundary"
+      },
+      "response": {
+        "conversationId": "chat_9ae5bbf8-af6d-48a6-874e-0a95b2a57389",
+        "message": "这里可以处理素材审核、排期建议和草稿查询。你想了解哪项素材的业务结果？",
+        "status": "completed",
+        "materials": [
+          {
+            "materialId": "M01",
+            "channel": "douyin",
+            "status": "saved",
+            "reviewStatus": "passed",
+            "risks": [],
+            "originalRequirement": {
+              "kind": "fixed",
+              "at": "2030-01-01T18:00:00+08:00"
+            },
+            "suggestedAt": "2030-01-01T19:00:00+08:00",
+            "pendingConfirmations": [],
+            "saveStatus": "existing",
+            "draft": {
+              "id": "d_8954b2eb-66fc-4cc9-a925-0f53f8559057",
+              "at": "2030-01-01T19:00:00+08:00"
+            }
+          }
+        ]
+      },
+      "status": 200
+    }
+  ]
+}

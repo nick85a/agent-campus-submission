@@ -1,0 +1,59 @@
+{
+  "startedAt": "2026-10-28T07:22:45.277Z",
+  "finishedAt": "2026-10-28T07:23:02.485Z",
+  "node": "v22.22.2",
+  "platform": "darwin",
+  "businessContract": "material-scheduler-v1",
+  "stateMachine": "explicit-v1",
+  "traceCollector": "pi.on",
+  "lockfileSha256": "c8775834c58995ed08d9ecc27db395d1c00ec001ce2c6386d5237a8d053781b9",
+  "checks": [
+    {
+      "name": "typecheck",
+      "exitCode": 0,
+      "durationMs": 3217,
+      "log": "examples/checks/typecheck.stdout.txt"
+    },
+    {
+      "name": "tests",
+      "exitCode": 0,
+      "durationMs": 9530,
+      "log": "examples/checks/tests.stdout.txt"
+    },
+    {
+      "name": "examples",
+      "exitCode": 0,
+      "durationMs": 1037,
+      "log": "examples/checks/examples.stdout.txt"
+    },
+    {
+      "name": "chat_examples",
+      "exitCode": 0,
+      "durationMs": 901,
+      "log": "examples/checks/chat_examples.stdout.txt"
+    },
+    {
+      "name": "business_chat",
+      "exitCode": 0,
+      "durationMs": 818,
+      "log": "examples/checks/business_chat.stdout.txt"
+    },
+    {
+      "name": "audit",
+      "exitCode": 0,
+      "durationMs": 1703,
+      "log": "examples/checks/audit.stdout.txt"
+    }
+  ],
+  "tests": {
+    "total": 91,
+    "passed": 91,
+    "failed": 0
+  },
+  "realModelValidation": {
+    "status": "smoke_verified",
+    "evidence": "examples/live/validation-status.json",
+    "note": "verify 不发起付费模型请求；真实效果以独立 live 运行记录为准"
+  },
+  "implementationStartedAt": "2026-10-28T03:00:10Z"
+}

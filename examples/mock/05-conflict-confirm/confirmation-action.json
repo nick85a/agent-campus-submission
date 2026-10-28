@@ -1,0 +1,12 @@
+{
+  "automatedFixture": true,
+  "note": "脚本模拟用户操作，不是真实人工审批记录",
+  "actor": "local-user",
+  "materialId": "M01",
+  "proposalId": "p_3a685819-abec-4a33-b9b7-df42f676912e",
+  "version": 1,
+  "kinds": [
+    "time_change"
+  ],
+  "decision": "accept"
+}

@@ -1,0 +1,65 @@
+{
+  "sessionId": "s_059738542da9f8e45bad2c3f",
+  "requestId": "demo-missing",
+  "owner": "local-user",
+  "version": 1,
+  "deliveryMode": "draft_only",
+  "items": [
+    {
+      "materialId": "M06",
+      "channel": "douyin",
+      "status": "needs_information",
+      "fsmState": "needs_information",
+      "reviewStatus": "needs_information",
+      "risks": [
+        {
+          "ruleId": "REQUIRED_TITLE",
+          "level": "missing",
+          "field": "title",
+          "evidence": "字段缺失或格式无效"
+        },
+        {
+          "ruleId": "RIGHTS_REQUIRED",
+          "level": "missing",
+          "field": "rights",
+          "evidence": "授权未知或格式无效，需要补充资料"
+        }
+      ],
+      "originalRequirement": {
+        "kind": "fixed",
+        "at": "2030-01-01T17:00:00+08:00"
+      },
+      "suggestedAt": null,
+      "approvedAt": null,
+      "pendingConfirmations": [],
+      "proposal": null,
+      "saveStatus": "not_saved",
+      "draft": null,
+      "currentConflicts": [],
+      "requiresRecheck": false,
+      "reason": "字段缺失或格式无效；授权未知或格式无效，需要补充资料"
+    }
+  ],
+  "transitions": [
+    {
+      "at": "2026-10-28T07:30:38.259Z",
+      "materialId": "M06",
+      "channel": "douyin",
+      "actor": "local-user",
+      "from": "checking",
+      "to": "needs_information",
+      "event": "information_required",
+      "reason": "字段缺失或格式无效；授权未知或格式无效，需要补充资料"
+    }
+  ],
+  "confirmations": [],
+  "runId": "r_788c637c-9a79-4fac-88ee-a7d8e8edac96",
+  "mode": "live",
+  "mockBoundary": null,
+  "runStatus": "awaiting_input",
+  "error": null,
+  "decisions": 5,
+  "toolCalls": 5,
+  "durationMs": 7870,
+  "tracePath": "examples/live/02-missing/trace.jsonl"
+}

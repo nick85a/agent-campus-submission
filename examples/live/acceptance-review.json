@@ -1,0 +1,339 @@
+{
+  "reviewedAt": "2026-10-28T07:46:13.231144+00:00",
+  "source": "examples/live/summary.json",
+  "sourceGeneratedAt": "2026-10-28T07:32:57.293Z",
+  "mode": "live",
+  "model": "kimi-k2.6",
+  "passed": true,
+  "casesPassed": 11,
+  "casesTotal": 11,
+  "assertionsPassed": 181,
+  "traceFilesChecked": 16,
+  "toolCallsChecked": 78,
+  "sqliteDatabasesChecked": 11,
+  "cases": [
+    {
+      "name": "01-normal",
+      "passed": true,
+      "assertions": [
+        "首轮状态符合预期",
+        "output.json: live模式及草稿边界",
+        "output.json: 原始发布要求不变",
+        "output.json: Trace起止及runId一致",
+        "output.json: Pi工具事件成对且有公开依据",
+        "output.json: 真实调用计数及预算",
+        "output.json: 保存状态有凭据且无发布状态",
+        "找到该次真实运行唯一SQLite",
+        "实际SQLite草稿与导出凭据一致",
+        "实际业务版本和最终状态一致",
+        "实际确认记录与导出一致",
+        "状态迁移直接匹配SQLite审计",
+        "正常保存原定17点且仅一份"
+      ],
+      "finalDrafts": 1,
+      "initialRunStatus": "completed",
+      "initialItemStatuses": [
+        "saved"
+      ],
+      "dbCrossChecked": true
+    },
+    {
+      "name": "02-missing",
+      "passed": true,
+      "assertions": [
+        "首轮状态符合预期",
+        "output.json: live模式及草稿边界",
+        "output.json: 原始发布要求不变",
+        "output.json: Trace起止及runId一致",
+        "output.json: Pi工具事件成对且有公开依据",
+        "output.json: 真实调用计数及预算",
+        "output.json: 保存状态有凭据且无发布状态",
+        "after-supplement.output.json: live模式及草稿边界",
+        "after-supplement.output.json: 原始发布要求不变",
+        "after-supplement.output.json: Trace起止及runId一致",
+        "after-supplement.output.json: Pi工具事件成对且有公开依据",
+        "after-supplement.output.json: 真实调用计数及预算",
+        "after-supplement.output.json: 保存状态有凭据且无发布状态",
+        "找到该次真实运行唯一SQLite",
+        "实际SQLite草稿与导出凭据一致",
+        "实际业务版本和最终状态一致",
+        "实际确认记录与导出一致",
+        "状态迁移直接匹配SQLite审计",
+        "缺资料先等待且不保存",
+        "补查无资料后结束",
+        "人工测试补充后重新审核保存",
+        "补充后素材版本确实递增一版并重新调用审核",
+        "补充来源明确标注测试夹具且授权由输入提供"
+      ],
+      "finalDrafts": 1,
+      "initialRunStatus": "awaiting_input",
+      "initialItemStatuses": [
+        "needs_information"
+      ],
+      "dbCrossChecked": true
+    },
+    {
+      "name": "03-risk-warning",
+      "passed": true,
+      "assertions": [
+        "首轮状态符合预期",
+        "output.json: live模式及草稿边界",
+        "output.json: 原始发布要求不变",
+        "output.json: Trace起止及runId一致",
+        "output.json: Pi工具事件成对且有公开依据",
+        "output.json: 真实调用计数及预算",
+        "output.json: 保存状态有凭据且无发布状态",
+        "找到该次真实运行唯一SQLite",
+        "实际SQLite草稿与导出凭据一致",
+        "实际业务版本和最终状态一致",
+        "实际确认记录与导出一致",
+        "状态迁移直接匹配SQLite审计",
+        "风险待确认且无草稿"
+      ],
+      "finalDrafts": 0,
+      "initialRunStatus": "awaiting_input",
+      "initialItemStatuses": [
+        "needs_confirmation"
+      ],
+      "dbCrossChecked": true
+    },
+    {
+      "name": "04-risk-blocked",
+      "passed": true,
+      "assertions": [
+        "首轮状态符合预期",
+        "output.json: live模式及草稿边界",
+        "output.json: 原始发布要求不变",
+        "output.json: Trace起止及runId一致",
+        "output.json: Pi工具事件成对且有公开依据",
+        "output.json: 真实调用计数及预算",
+        "output.json: 保存状态有凭据且无发布状态",
+        "找到该次真实运行唯一SQLite",
+        "实际SQLite草稿与导出凭据一致",
+        "实际业务版本和最终状态一致",
+        "实际确认记录与导出一致",
+        "状态迁移直接匹配SQLite审计",
+        "禁止风险阻断且无草稿"
+      ],
+      "finalDrafts": 0,
+      "initialRunStatus": "blocked",
+      "initialItemStatuses": [
+        "blocked"
+      ],
+      "dbCrossChecked": true
+    },
+    {
+      "name": "05-conflict-confirm",
+      "passed": true,
+      "assertions": [
+        "首轮状态符合预期",
+        "output.json: live模式及草稿边界",
+        "output.json: 原始发布要求不变",
+        "output.json: Trace起止及runId一致",
+        "output.json: Pi工具事件成对且有公开依据",
+        "output.json: 真实调用计数及预算",
+        "output.json: 保存状态有凭据且无发布状态",
+        "after-confirm.output.json: live模式及草稿边界",
+        "after-confirm.output.json: 原始发布要求不变",
+        "after-confirm.output.json: Trace起止及runId一致",
+        "after-confirm.output.json: Pi工具事件成对且有公开依据",
+        "after-confirm.output.json: 真实调用计数及预算",
+        "after-confirm.output.json: 保存状态有凭据且无发布状态",
+        "找到该次真实运行唯一SQLite",
+        "实际SQLite草稿与导出凭据一致",
+        "实际业务版本和最终状态一致",
+        "实际确认记录与导出一致",
+        "状态迁移直接匹配SQLite审计",
+        "18点占用建议19点且确认前无保存",
+        "测试夹具确认后才保存19点"
+      ],
+      "finalDrafts": 1,
+      "initialRunStatus": "awaiting_input",
+      "initialItemStatuses": [
+        "needs_confirmation"
+      ],
+      "dbCrossChecked": true
+    },
+    {
+      "name": "06-save-failure",
+      "passed": true,
+      "assertions": [
+        "首轮状态符合预期",
+        "output.json: live模式及草稿边界",
+        "output.json: 原始发布要求不变",
+        "output.json: Trace起止及runId一致",
+        "output.json: Pi工具事件成对且有公开依据",
+        "output.json: 真实调用计数及预算",
+        "output.json: 保存状态有凭据且无发布状态",
+        "after-retry.output.json: live模式及草稿边界",
+        "after-retry.output.json: 原始发布要求不变",
+        "after-retry.output.json: Trace起止及runId一致",
+        "after-retry.output.json: Pi工具事件成对且有公开依据",
+        "after-retry.output.json: 真实调用计数及预算",
+        "after-retry.output.json: 保存状态有凭据且无发布状态",
+        "找到该次真实运行唯一SQLite",
+        "实际SQLite草稿与导出凭据一致",
+        "实际业务版本和最终状态一致",
+        "实际确认记录与导出一致",
+        "状态迁移直接匹配SQLite审计",
+        "保存失败明确失败且当时无草稿",
+        "模型观察失败仅重试一次后结束",
+        "失败历史没有假保存成功",
+        "恢复后仅保存一份"
+      ],
+      "finalDrafts": 1,
+      "initialRunStatus": "failed",
+      "initialItemStatuses": [
+        "save_failed"
+      ],
+      "dbCrossChecked": true
+    },
+    {
+      "name": "07-duplicate",
+      "passed": true,
+      "assertions": [
+        "首轮状态符合预期",
+        "output.json: live模式及草稿边界",
+        "output.json: 原始发布要求不变",
+        "output.json: Trace起止及runId一致",
+        "output.json: Pi工具事件成对且有公开依据",
+        "output.json: 真实调用计数及预算",
+        "output.json: 保存状态有凭据且无发布状态",
+        "repeat.output.json: live模式及草稿边界",
+        "repeat.output.json: 原始发布要求不变",
+        "repeat.output.json: Trace起止及runId一致",
+        "repeat.output.json: Pi工具事件成对且有公开依据",
+        "repeat.output.json: 真实调用计数及预算",
+        "repeat.output.json: 保存状态有凭据且无发布状态",
+        "找到该次真实运行唯一SQLite",
+        "实际SQLite草稿与导出凭据一致",
+        "实际业务版本和最终状态一致",
+        "实际确认记录与导出一致",
+        "状态迁移直接匹配SQLite审计",
+        "重复返回同一凭据且仅一份"
+      ],
+      "finalDrafts": 1,
+      "initialRunStatus": "completed",
+      "initialItemStatuses": [
+        "saved"
+      ],
+      "dbCrossChecked": true
+    },
+    {
+      "name": "08-supplement-source",
+      "passed": true,
+      "assertions": [
+        "首轮状态符合预期",
+        "output.json: live模式及草稿边界",
+        "output.json: 原始发布要求不变",
+        "output.json: Trace起止及runId一致",
+        "output.json: Pi工具事件成对且有公开依据",
+        "output.json: 真实调用计数及预算",
+        "output.json: 保存状态有凭据且无发布状态",
+        "找到该次真实运行唯一SQLite",
+        "实际SQLite草稿与导出凭据一致",
+        "实际业务版本和最终状态一致",
+        "实际确认记录与导出一致",
+        "状态迁移直接匹配SQLite审计",
+        "补充源查到资料后重新审核"
+      ],
+      "finalDrafts": 1,
+      "initialRunStatus": "completed",
+      "initialItemStatuses": [
+        "saved"
+      ],
+      "dbCrossChecked": true
+    },
+    {
+      "name": "09-changed-occupancy",
+      "passed": true,
+      "assertions": [
+        "首轮状态符合预期",
+        "output.json: live模式及草稿边界",
+        "output.json: 原始发布要求不变",
+        "output.json: Trace起止及runId一致",
+        "output.json: Pi工具事件成对且有公开依据",
+        "output.json: 真实调用计数及预算",
+        "output.json: 保存状态有凭据且无发布状态",
+        "after-change.output.json: live模式及草稿边界",
+        "after-change.output.json: 原始发布要求不变",
+        "after-change.output.json: Trace起止及runId一致",
+        "after-change.output.json: Pi工具事件成对且有公开依据",
+        "after-change.output.json: 真实调用计数及预算",
+        "after-change.output.json: 保存状态有凭据且无发布状态",
+        "找到该次真实运行唯一SQLite",
+        "实际SQLite草稿与导出凭据一致",
+        "实际业务版本和最终状态一致",
+        "实际确认记录与导出一致",
+        "状态迁移直接匹配SQLite审计",
+        "更换占用后重新选择原18点而非固选19点"
+      ],
+      "finalDrafts": 1,
+      "initialRunStatus": "awaiting_input",
+      "initialItemStatuses": [
+        "needs_confirmation"
+      ],
+      "dbCrossChecked": true
+    },
+    {
+      "name": "10-execution-limit",
+      "passed": true,
+      "assertions": [
+        "首轮状态符合预期",
+        "output.json: live模式及草稿边界",
+        "output.json: 原始发布要求不变",
+        "output.json: Trace起止及runId一致",
+        "output.json: Pi工具事件成对且有公开依据",
+        "output.json: 真实调用计数及预算",
+        "output.json: 保存状态有凭据且无发布状态",
+        "找到该次真实运行唯一SQLite",
+        "实际SQLite草稿与导出凭据一致",
+        "实际业务版本和最终状态一致",
+        "实际确认记录与导出一致",
+        "状态迁移直接匹配SQLite审计",
+        "超限明确incomplete且无保存"
+      ],
+      "finalDrafts": 0,
+      "initialRunStatus": "incomplete",
+      "initialItemStatuses": [
+        "ready"
+      ],
+      "dbCrossChecked": true
+    },
+    {
+      "name": "11-batch",
+      "passed": true,
+      "assertions": [
+        "首轮状态符合预期",
+        "output.json: live模式及草稿边界",
+        "output.json: 原始发布要求不变",
+        "output.json: Trace起止及runId一致",
+        "output.json: Pi工具事件成对且有公开依据",
+        "output.json: 真实调用计数及预算",
+        "output.json: 保存状态有凭据且无发布状态",
+        "找到该次真实运行唯一SQLite",
+        "实际SQLite草稿与导出凭据一致",
+        "实际业务版本和最终状态一致",
+        "实际确认记录与导出一致",
+        "状态迁移直接匹配SQLite审计",
+        "同批次分别建议19点20点且均未保存"
+      ],
+      "finalDrafts": 0,
+      "initialRunStatus": "awaiting_input",
+      "initialItemStatuses": [
+        "needs_confirmation",
+        "needs_confirmation"
+      ],
+      "dbCrossChecked": true
+    }
+  ],
+  "failures": [],
+  "limitations": [
+    "本次是一次固定合成数据场景运行，不是多次稳定性统计",
+    "确认和资料补充由测试夹具输入，不是真人审批",
+    "重复提交采用宿主幂等快路径，不计为模型ReAct证据",
+    "超限用例的runStatus=incomplete与item.status=ready分属运行结果和逐项进度，二者允许不同",
+    "只读交叉核对本机临时SQLite；未将数据库或凭据加入交付"
+  ],
+  "reviewMethod": "离线只读核对既有模型运行产物、Pi事件及SQLite；未重新调用模型"
+}

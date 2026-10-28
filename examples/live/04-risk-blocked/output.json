@@ -1,0 +1,59 @@
+{
+  "sessionId": "s_e85ff36be6fdcb8b8fb4cfa1",
+  "requestId": "demo-blocked",
+  "owner": "local-user",
+  "version": 1,
+  "deliveryMode": "draft_only",
+  "items": [
+    {
+      "materialId": "M04",
+      "channel": "douyin",
+      "status": "blocked",
+      "fsmState": "blocked",
+      "reviewStatus": "blocked",
+      "risks": [
+        {
+          "ruleId": "RIGHTS_DENIED",
+          "level": "block",
+          "field": "rights",
+          "evidence": "授权明确不通过"
+        }
+      ],
+      "originalRequirement": {
+        "kind": "fixed",
+        "at": "2030-01-01T17:00:00+08:00"
+      },
+      "suggestedAt": null,
+      "approvedAt": null,
+      "pendingConfirmations": [],
+      "proposal": null,
+      "saveStatus": "not_saved",
+      "draft": null,
+      "currentConflicts": [],
+      "requiresRecheck": false,
+      "reason": "授权明确不通过"
+    }
+  ],
+  "transitions": [
+    {
+      "at": "2026-10-28T07:30:59.451Z",
+      "materialId": "M04",
+      "channel": "douyin",
+      "actor": "local-user",
+      "from": "checking",
+      "to": "blocked",
+      "event": "blocked",
+      "reason": "授权明确不通过"
+    }
+  ],
+  "confirmations": [],
+  "runId": "r_7196b699-e016-4d06-97b4-45fa3498d9da",
+  "mode": "live",
+  "mockBoundary": null,
+  "runStatus": "blocked",
+  "error": null,
+  "decisions": 3,
+  "toolCalls": 3,
+  "durationMs": 4889,
+  "tracePath": "examples/live/04-risk-blocked/trace.jsonl"
+}

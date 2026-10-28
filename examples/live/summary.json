@@ -1,0 +1,119 @@
+{
+  "generatedAt": "2026-10-28T07:32:57.293Z",
+  "mode": "live",
+  "model": "kimi-k2.6",
+  "boundary": "真实服务运行，检查具体输出与轨迹后评价",
+  "dataHash": "c9e230410fc9f759028edee172f21f924551d5ac562b2a6b283b6592ac93e3cd",
+  "scenarios": [
+    {
+      "name": "01-normal",
+      "mode": "live",
+      "expectedStatus": "saved",
+      "actualStatus": "saved",
+      "passed": true,
+      "output": "examples/live/01-normal/output.json",
+      "trace": "examples/live/01-normal/trace.jsonl",
+      "outcome": "examples/live/01-normal/outcome.json"
+    },
+    {
+      "name": "02-missing",
+      "mode": "live",
+      "expectedStatus": "needs_information",
+      "actualStatus": "needs_information",
+      "passed": true,
+      "output": "examples/live/02-missing/output.json",
+      "trace": "examples/live/02-missing/trace.jsonl",
+      "outcome": "examples/live/02-missing/outcome.json"
+    },
+    {
+      "name": "03-risk-warning",
+      "mode": "live",
+      "expectedStatus": "needs_confirmation",
+      "actualStatus": "needs_confirmation",
+      "passed": true,
+      "output": "examples/live/03-risk-warning/output.json",
+      "trace": "examples/live/03-risk-warning/trace.jsonl",
+      "outcome": "examples/live/03-risk-warning/outcome.json"
+    },
+    {
+      "name": "04-risk-blocked",
+      "mode": "live",
+      "expectedStatus": "blocked",
+      "actualStatus": "blocked",
+      "passed": true,
+      "output": "examples/live/04-risk-blocked/output.json",
+      "trace": "examples/live/04-risk-blocked/trace.jsonl",
+      "outcome": "examples/live/04-risk-blocked/outcome.json"
+    },
+    {
+      "name": "05-conflict-confirm",
+      "mode": "live",
+      "expectedStatus": "needs_confirmation",
+      "actualStatus": "needs_confirmation",
+      "passed": true,
+      "output": "examples/live/05-conflict-confirm/output.json",
+      "trace": "examples/live/05-conflict-confirm/trace.jsonl",
+      "outcome": "examples/live/05-conflict-confirm/outcome.json"
+    },
+    {
+      "name": "06-save-failure",
+      "mode": "live",
+      "expectedStatus": "save_failed",
+      "actualStatus": "save_failed",
+      "passed": true,
+      "output": "examples/live/06-save-failure/output.json",
+      "trace": "examples/live/06-save-failure/trace.jsonl",
+      "outcome": "examples/live/06-save-failure/outcome.json"
+    },
+    {
+      "name": "07-duplicate",
+      "mode": "live",
+      "expectedStatus": "saved",
+      "actualStatus": "saved",
+      "passed": true,
+      "output": "examples/live/07-duplicate/output.json",
+      "trace": "examples/live/07-duplicate/trace.jsonl",
+      "outcome": "examples/live/07-duplicate/outcome.json"
+    },
+    {
+      "name": "08-supplement-source",
+      "mode": "live",
+      "expectedStatus": "saved",
+      "actualStatus": "saved",
+      "passed": true,
+      "output": "examples/live/08-supplement-source/output.json",
+      "trace": "examples/live/08-supplement-source/trace.jsonl",
+      "outcome": "examples/live/08-supplement-source/outcome.json"
+    },
+    {
+      "name": "09-changed-occupancy",
+      "mode": "live",
+      "expectedStatus": "needs_confirmation",
+      "actualStatus": "needs_confirmation",
+      "passed": true,
+      "output": "examples/live/09-changed-occupancy/output.json",
+      "trace": "examples/live/09-changed-occupancy/trace.jsonl",
+      "outcome": "examples/live/09-changed-occupancy/outcome.json"
+    },
+    {
+      "name": "10-execution-limit",
+      "mode": "live",
+      "expectedStatus": "incomplete",
+      "actualStatus": "ready",
+      "passed": true,
+      "output": "examples/live/10-execution-limit/output.json",
+      "trace": "examples/live/10-execution-limit/trace.jsonl",
+      "outcome": "examples/live/10-execution-limit/outcome.json"
+    },
+    {
+      "name": "11-batch",
+      "mode": "live",
+      "expectedStatus": "needs_confirmation",
+      "actualStatus": "needs_confirmation",
+      "passed": true,
+      "output": "examples/live/11-batch/output.json",
+      "trace": "examples/live/11-batch/trace.jsonl",
+      "outcome": "examples/live/11-batch/outcome.json"
+    }
+  ]
+}

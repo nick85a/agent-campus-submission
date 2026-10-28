@@ -1,0 +1,2 @@
+examples/checks/*.stdout.txt whitespace=-blank-at-eof
+examples/checks/*.stderr.txt whitespace=-blank-at-eof

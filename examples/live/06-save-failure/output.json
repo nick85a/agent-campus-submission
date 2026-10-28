@@ -1,0 +1,82 @@
+{
+  "sessionId": "s_444e45aa9171688c841de871",
+  "requestId": "demo-normal",
+  "owner": "local-user",
+  "version": 4,
+  "deliveryMode": "draft_only",
+  "items": [
+    {
+      "materialId": "M01",
+      "channel": "douyin",
+      "status": "save_failed",
+      "fsmState": "save_failed",
+      "reviewStatus": "passed",
+      "risks": [],
+      "originalRequirement": {
+        "kind": "fixed",
+        "at": "2030-01-01T17:00:00+08:00"
+      },
+      "suggestedAt": null,
+      "approvedAt": null,
+      "pendingConfirmations": [],
+      "proposal": null,
+      "saveStatus": "failed",
+      "draft": null,
+      "currentConflicts": [],
+      "requiresRecheck": false,
+      "reason": "草稿保存失败，未产生新记录；可使用 retry 重试"
+    }
+  ],
+  "transitions": [
+    {
+      "at": "2026-10-28T07:31:32.799Z",
+      "materialId": "M01",
+      "channel": "douyin",
+      "actor": "local-user",
+      "from": "checking",
+      "to": "checking",
+      "event": "assessment_started",
+      "reason": "审核通过，等待选择并校验时段"
+    },
+    {
+      "at": "2026-10-28T07:31:34.241Z",
+      "materialId": "M01",
+      "channel": "douyin",
+      "actor": "local-user",
+      "from": "checking",
+      "to": "ready",
+      "event": "checks_passed",
+      "reason": "存在符合要求、授权与占用校验的可保存时段"
+    },
+    {
+      "at": "2026-10-28T07:31:36.218Z",
+      "materialId": "M01",
+      "channel": "douyin",
+      "actor": "local-user",
+      "from": "ready",
+      "to": "save_failed",
+      "event": "save_failed",
+      "reason": "草稿保存失败，未产生新记录；可使用 retry 重试"
+    },
+    {
+      "at": "2026-10-28T07:31:37.993Z",
+      "materialId": "M01",
+      "channel": "douyin",
+      "actor": "local-user",
+      "from": "save_failed",
+      "to": "save_failed",
+      "event": "save_failed",
+      "reason": "草稿保存失败，未产生新记录；可使用 retry 重试"
+    }
+  ],
+  "confirmations": [],
+  "runId": "r_2eb3904e-f3a9-4830-a018-999f85db62ec",
+  "mode": "live",
+  "mockBoundary": null,
+  "runStatus": "failed",
+  "error": null,
+  "decisions": 5,
+  "toolCalls": 6,
+  "durationMs": 8361,
+  "tracePath": "examples/live/06-save-failure/trace.jsonl"
+}

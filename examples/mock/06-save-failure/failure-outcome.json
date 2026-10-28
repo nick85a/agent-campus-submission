@@ -1,0 +1,25 @@
+{
+  "drafts": [],
+  "item": {
+    "materialId": "M01",
+    "channel": "douyin",
+    "status": "save_failed",
+    "fsmState": "save_failed",
+    "reviewStatus": "passed",
+    "risks": [],
+    "originalRequirement": {
+      "kind": "fixed",
+      "at": "2030-01-01T17:00:00+08:00"
+    },
+    "suggestedAt": null,
+    "approvedAt": null,
+    "pendingConfirmations": [],
+    "proposal": null,
+    "saveStatus": "failed",
+    "draft": null,
+    "currentConflicts": [],
+    "requiresRecheck": false,
+    "reason": "草稿保存失败，未产生新记录；可使用 retry 重试"
+  },
+  "fault": "INSERT 后抛错，事务回滚"
+}

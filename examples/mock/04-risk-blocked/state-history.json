@@ -1,0 +1,12 @@
+[
+  {
+    "at": "2026-10-28T07:22:58.844Z",
+    "materialId": "M04",
+    "channel": "douyin",
+    "actor": "local-user",
+    "from": "checking",
+    "to": "blocked",
+    "event": "blocked",
+    "reason": "授权明确不通过"
+  }
+]

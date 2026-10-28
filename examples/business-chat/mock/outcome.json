@@ -1,0 +1,167 @@
+{
+  "automatedFixture": true,
+  "drafts": [
+    {
+      "id": "d_f60e6240-e61f-407d-9c9c-7fec149d700d",
+      "sessionId": "s_fe13636d330ddf6d629af979",
+      "materialId": "M01",
+      "channel": "douyin",
+      "at": "2030-01-01T19:00:00+08:00",
+      "materialVersion": 1,
+      "rulesHash": "ff3cd2f50eeea9b70f95ecae99198b5c7e961fee906c14589126849a38e3a667",
+      "createdAt": "2026-10-28T07:23:00.741Z"
+    }
+  ],
+  "latest": {
+    "sessionId": "s_fe13636d330ddf6d629af979",
+    "requestId": "auto_e1af3c3f5212061ede9468e3047eb397c6dba8fc5161cd342433e00dd9bf6b18",
+    "owner": "local-user",
+    "version": 9,
+    "deliveryMode": "draft_only",
+    "items": [
+      {
+        "materialId": "M01",
+        "channel": "douyin",
+        "status": "saved",
+        "fsmState": "saved",
+        "reviewStatus": "passed",
+        "risks": [],
+        "originalRequirement": {
+          "kind": "fixed",
+          "at": "2030-01-01T18:00:00+08:00"
+        },
+        "suggestedAt": "2030-01-01T19:00:00+08:00",
+        "approvedAt": "2030-01-01T19:00:00+08:00",
+        "pendingConfirmations": [],
+        "proposal": {
+          "id": "p_c34d9aa5-6004-4edd-953c-f106344341e8",
+          "version": 1,
+          "at": "2030-01-01T19:00:00+08:00",
+          "materialVersion": 1,
+          "rulesHash": "ff3cd2f50eeea9b70f95ecae99198b5c7e961fee906c14589126849a38e3a667",
+          "kinds": [
+            "time_change"
+          ],
+          "warningIds": [],
+          "decision": "accepted"
+        },
+        "saveStatus": "existing",
+        "draft": {
+          "id": "d_f60e6240-e61f-407d-9c9c-7fec149d700d",
+          "sessionId": "s_fe13636d330ddf6d629af979",
+          "materialId": "M01",
+          "channel": "douyin",
+          "at": "2030-01-01T19:00:00+08:00",
+          "materialVersion": 1,
+          "rulesHash": "ff3cd2f50eeea9b70f95ecae99198b5c7e961fee906c14589126849a38e3a667",
+          "createdAt": "2026-10-28T07:23:00.741Z"
+        },
+        "currentConflicts": [],
+        "requiresRecheck": false,
+        "reason": "重复提交，返回已有草稿"
+      }
+    ],
+    "transitions": [
+      {
+        "at": "2026-10-28T07:23:00.706Z",
+        "materialId": "M01",
+        "channel": "douyin",
+        "actor": "local-user",
+        "from": "checking",
+        "to": "checking",
+        "event": "assessment_started",
+        "reason": "审核通过，等待选择并校验时段"
+      },
+      {
+        "at": "2026-10-28T07:23:00.711Z",
+        "materialId": "M01",
+        "channel": "douyin",
+        "actor": "local-user",
+        "from": "checking",
+        "to": "needs_confirmation",
+        "event": "confirmation_requested",
+        "reason": "需要本人确认：time_change"
+      },
+      {
+        "at": "2026-10-28T07:23:00.729Z",
+        "materialId": "M01",
+        "channel": "douyin",
+        "actor": "local-user",
+        "from": "needs_confirmation",
+        "to": "checking",
+        "event": "confirmation_accepted",
+        "reason": "用户已确认，待重新检查并保存草稿"
+      },
+      {
+        "at": "2026-10-28T07:23:00.737Z",
+        "materialId": "M01",
+        "channel": "douyin",
+        "actor": "local-user",
+        "from": "checking",
+        "to": "checking",
+        "event": "assessment_started",
+        "reason": "审核通过，等待选择并校验时段"
+      },
+      {
+        "at": "2026-10-28T07:23:00.739Z",
+        "materialId": "M01",
+        "channel": "douyin",
+        "actor": "local-user",
+        "from": "checking",
+        "to": "ready",
+        "event": "checks_passed",
+        "reason": "存在符合要求、授权与占用校验的可保存时段"
+      },
+      {
+        "at": "2026-10-28T07:23:00.741Z",
+        "materialId": "M01",
+        "channel": "douyin",
+        "actor": "local-user",
+        "from": "ready",
+        "to": "ready",
+        "event": "checks_passed",
+        "reason": "保存前审核、授权和时段复检通过"
+      },
+      {
+        "at": "2026-10-28T07:23:00.741Z",
+        "materialId": "M01",
+        "channel": "douyin",
+        "actor": "local-user",
+        "from": "ready",
+        "to": "saving",
+        "event": "save_started",
+        "reason": "开始事务保存排期草稿"
+      },
+      {
+        "at": "2026-10-28T07:23:00.741Z",
+        "materialId": "M01",
+        "channel": "douyin",
+        "actor": "local-user",
+        "from": "saving",
+        "to": "saved",
+        "event": "save_succeeded",
+        "reason": "草稿已保存；未执行发布"
+      },
+      {
+        "at": "2026-10-28T07:23:00.748Z",
+        "materialId": "M01",
+        "channel": "douyin",
+        "actor": "local-user",
+        "from": "saved",
+        "to": "saved",
+        "event": "draft_reused",
+        "reason": "重复提交，返回已有草稿"
+      }
+    ],
+    "confirmations": [
+      {
+        "proposal_id": "p_c34d9aa5-6004-4edd-953c-f106344341e8",
+        "proposal_version": 1,
+        "kind": "time_change",
+        "decision": "accept",
+        "actor": "local-user",
+        "at": "2026-10-28T07:23:00.729Z"
+      }
+    ]
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "automatedFixture": true,
+  "drafts": [],
+  "latest": {
+    "sessionId": "s_fe13636d330ddf6d629af979",
+    "requestId": "auto_e1af3c3f5212061ede9468e3047eb397c6dba8fc5161cd342433e00dd9bf6b18",
+    "owner": "local-user",
+    "version": 3,
+    "deliveryMode": "draft_only",
+    "items": [
+      {
+        "materialId": "M01",
+        "channel": "douyin",
+        "status": "needs_confirmation",
+        "fsmState": "needs_confirmation",
+        "reviewStatus": "passed",
+        "risks": [],
+        "originalRequirement": {
+          "kind": "fixed",
+          "at": "2030-01-01T18:00:00+08:00"
+        },
+        "suggestedAt": "2030-01-01T19:00:00+08:00",
+        "approvedAt": null,
+        "pendingConfirmations": [
+          "time_change"
+        ],
+        "proposal": {
+          "id": "p_780630ee-1db4-438a-ac70-8a91dd0a5154",
+          "version": 1,
+          "at": "2030-01-01T19:00:00+08:00",
+          "materialVersion": 1,
+          "rulesHash": "ff3cd2f50eeea9b70f95ecae99198b5c7e961fee906c14589126849a38e3a667",
+          "kinds": [
+            "time_change"
+          ],
+          "warningIds": [],
+          "decision": "pending"
+        },
+        "saveStatus": "not_saved",
+        "draft": null,
+        "currentConflicts": [],
+        "requiresRecheck": false,
+        "reason": "需要本人确认：time_change"
+      }
+    ],
+    "transitions": [
+      {
+        "at": "2026-10-28T06:21:52.730Z",
+        "materialId": "M01",
+        "channel": "douyin",
+        "actor": "local-user",
+        "from": "checking",
+        "to": "checking",
+        "event": "assessment_started",
+        "reason": "审核通过，等待选择并校验时段"
+      },
+      {
+        "at": "2026-10-28T06:21:56.271Z",
+        "materialId": "M01",
+        "channel": "douyin",
+        "actor": "local-user",
+        "from": "checking",
+        "to": "needs_confirmation",
+        "event": "confirmation_requested",
+        "reason": "需要本人确认：time_change"
+      }
+    ],
+    "confirmations": []
+  }
+}

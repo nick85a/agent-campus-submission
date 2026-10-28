@@ -1,0 +1,14 @@
+{
+  "at": "2026-10-28T05:04:26.622Z",
+  "mode": "live",
+  "model": "kimi-k2.6",
+  "boundary": "真实 Kimi 排期决策；语言入口为有限语法解析；确认由测试夹具模拟，不是真实人工审批",
+  "cases": [
+    {
+      "name": "01-conflict-confirm",
+      "passed": true,
+      "drafts": 1,
+      "trace": "examples/chat/legacy-live/01-conflict-confirm/trace.jsonl"
+    }
+  ]
+}

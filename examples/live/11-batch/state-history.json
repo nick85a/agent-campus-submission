@@ -1,0 +1,42 @@
+[
+  {
+    "at": "2026-10-28T07:32:43.676Z",
+    "materialId": "M01",
+    "channel": "douyin",
+    "actor": "local-user",
+    "from": "checking",
+    "to": "checking",
+    "event": "assessment_started",
+    "reason": "审核通过，等待选择并校验时段"
+  },
+  {
+    "at": "2026-10-28T07:32:46.942Z",
+    "materialId": "M01",
+    "channel": "douyin",
+    "actor": "local-user",
+    "from": "checking",
+    "to": "needs_confirmation",
+    "event": "confirmation_requested",
+    "reason": "需要本人确认：time_change"
+  },
+  {
+    "at": "2026-10-28T07:32:51.934Z",
+    "materialId": "M05",
+    "channel": "douyin",
+    "actor": "local-user",
+    "from": "checking",
+    "to": "checking",
+    "event": "assessment_started",
+    "reason": "审核通过，等待选择并校验时段"
+  },
+  {
+    "at": "2026-10-28T07:32:55.664Z",
+    "materialId": "M05",
+    "channel": "douyin",
+    "actor": "local-user",
+    "from": "checking",
+    "to": "needs_confirmation",
+    "event": "confirmation_requested",
+    "reason": "需要本人确认：time_change"
+  }
+]

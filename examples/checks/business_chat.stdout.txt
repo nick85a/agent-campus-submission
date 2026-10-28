@@ -1,0 +1,5 @@
+
+> content-scheduler-agent@1.0.0 examples:business-chat
+> node --env-file-if-exists=.env --experimental-sqlite --import tsx scripts/business-chat-examples.ts
+
+mock business chat: PASS

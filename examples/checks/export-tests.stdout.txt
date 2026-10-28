@@ -1,0 +1,586 @@
+
+> content-scheduler-agent@1.0.0 test
+> node --experimental-sqlite --import tsx --test tests/*.test.ts
+
+TAP version 13
+# (node:20057) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: 真正通过 Pi 执行离线工具循环，正常、缺失、风险和冲突走不同路径
+ok 1 - 真正通过 Pi 执行离线工具循环，正常、缺失、风险和冲突走不同路径
+  ---
+  duration_ms: 241.3685
+  type: 'test'
+  ...
+# Subtest: Pi 在确认后恢复，并对变动占用重新决策而不是固定选择 19 点
+ok 2 - Pi 在确认后恢复，并对变动占用重新决策而不是固定选择 19 点
+  ---
+  duration_ms: 153.176708
+  type: 'test'
+  ...
+# Subtest: 占用由 18 改到 19 后，重复输入回到原要求且清除旧待确认项
+ok 3 - 占用由 18 改到 19 后，重复输入回到原要求且清除旧待确认项
+  ---
+  duration_ms: 45.644125
+  type: 'test'
+  ...
+# Subtest: 模型观察保存失败后有界重试，仍失败时返回 failed，重跑后只存一份
+ok 4 - 模型观察保存失败后有界重试，仍失败时返回 failed，重跑后只存一份
+  ---
+  duration_ms: 69.675708
+  type: 'test'
+  ...
+# Subtest: 模型决策与工具上限都由宿主强制执行并返回 incomplete
+ok 5 - 模型决策与工具上限都由宿主强制执行并返回 incomplete
+  ---
+  duration_ms: 70.947542
+  type: 'test'
+  ...
+# Subtest: 未知素材和无可用时段明确等待输入，不虚构资料或越界
+ok 6 - 未知素材和无可用时段明确等待输入，不虚构资料或越界
+  ---
+  duration_ms: 56.089583
+  type: 'test'
+  ...
+# Subtest: 大批次预算耗尽后重跑可以继续，已有草稿复检后复用
+ok 7 - 大批次预算耗尽后重跑可以继续，已有草稿复检后复用
+  ---
+  duration_ms: 334.242041
+  type: 'test'
+  ...
+# Subtest: 已有草稿遭遇外部占用后重跑明确阻断，并保留原草稿供人工处理
+ok 8 - 已有草稿遭遇外部占用后重跑明确阻断，并保留原草稿供人工处理
+  ---
+  duration_ms: 47.267958
+  type: 'test'
+  ...
+# Subtest: 风险确认只对具体时段生效，原时段恢复可用后重新请求风险确认
+ok 9 - 风险确认只对具体时段生效，原时段恢复可用后重新请求风险确认
+  ---
+  duration_ms: 50.202875
+  type: 'test'
+  ...
+# Subtest: 单项恢复完成不能虚报整批完成，未处理项保留并可重跑继续
+ok 10 - 单项恢复完成不能虚报整批完成，未处理项保留并可重跑继续
+  ---
+  duration_ms: 126.649417
+  type: 'test'
+  ...
+# (node:20058) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: 统一命令契约形成完整状态历史，审核通过与实际保存分开表达
+ok 11 - 统一命令契约形成完整状态历史，审核通过与实际保存分开表达
+  ---
+  duration_ms: 34.966042
+  type: 'test'
+  ...
+# Subtest: 模型来源不能调用用户确认、自由补充资料、开会话或重试入口
+ok 12 - 模型来源不能调用用户确认、自由补充资料、开会话或重试入口
+  ---
+  duration_ms: 15.426167
+  type: 'test'
+  ...
+# Subtest: 确认后只进入复检状态，时段再次冲突时不能保存或沿用同意到另一个时段
+ok 13 - 确认后只进入复检状态，时段再次冲突时不能保存或沿用同意到另一个时段
+  ---
+  duration_ms: 21.624834
+  type: 'test'
+  ...
+# Subtest: 回滚后状态历史不出现虚假的保存成功，重试复用同一业务任务
+ok 14 - 回滚后状态历史不出现虚假的保存成功，重试复用同一业务任务
+  ---
+  duration_ms: 26.41525
+  type: 'test'
+  ...
+# Subtest: 统一入口拒绝发布、原型属性和未知动作
+ok 15 - 统一入口拒绝发布、原型属性和未知动作
+  ---
+  duration_ms: 13.560541
+  type: 'test'
+  ...
+# (node:20059) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: 自然语言理解必须引用用户原文，不能编造时间、授权或替用户批准
+ok 16 - 自然语言理解必须引用用户原文，不能编造时间、授权或替用户批准
+  ---
+  duration_ms: 6.289875
+  type: 'test'
+  ...
+# Subtest: 未写渠道的完整中文时间请求使用业务默认值，不误拒模型回填的默认渠道
+ok 17 - 未写渠道的完整中文时间请求使用业务默认值，不误拒模型回填的默认渠道
+  ---
+  duration_ms: 1.291584
+  type: 'test'
+  ...
+# Subtest: 补资料可引用当前素材，标题先接收，含糊或历史授权不能变成已授权
+ok 18 - 补资料可引用当前素材，标题先接收，含糊或历史授权不能变成已授权
+  ---
+  duration_ms: 0.229708
+  type: 'test'
+  ...
+# Subtest: 当前素材只解决对象省略，不豁免其他素材或补充字段的原文核验
+ok 19 - 当前素材只解决对象省略，不豁免其他素材或补充字段的原文核验
+  ---
+  duration_ms: 0.389459
+  type: 'test'
+  ...
+# Subtest: HTTP 业务聊天返回确认卡片、持久化恢复、幂等写入，响应中无调试内容
+ok 20 - HTTP 业务聊天返回确认卡片、持久化恢复、幂等写入，响应中无调试内容
+  ---
+  duration_ms: 128.761083
+  type: 'test'
+  ...
+# Subtest: 业务接口拒绝伪造确认、越权字段和从聊天索取运行记录
+ok 21 - 业务接口拒绝伪造确认、越权字段和从聊天索取运行记录
+  ---
+  duration_ms: 44.367667
+  type: 'test'
+  ...
+# Subtest: HTTP 路由只接受业务 JSON，服务重启后会话可继续，未知内部路由不暴露
+ok 22 - HTTP 路由只接受业务 JSON，服务重启后会话可继续，未知内部路由不暴露
+  ---
+  duration_ms: 160.58425
+  type: 'test'
+  ...
+# Subtest: 真实语言适配器用 Pi 选择意图工具，而非依赖固定命令句（上游为测试替身）
+ok 23 - 真实语言适配器用 Pi 选择意图工具，而非依赖固定命令句（上游为测试替身）
+  ---
+  duration_ms: 574.035583
+  type: 'test'
+  ...
+# Subtest: 模型不能把自然语言同意直接记成批准，后台异常也不会回显给业务用户
+ok 24 - 模型不能把自然语言同意直接记成批准，后台异常也不会回显给业务用户
+  ---
+  duration_ms: 6.919917
+  type: 'test'
+  ...
+# Subtest: 即使理解层返回批准动作，宿主也拒绝模型代批
+ok 25 - 即使理解层返回批准动作，宿主也拒绝模型代批
+  ---
+  duration_ms: 91.061166
+  type: 'test'
+  ...
+# (node:20060) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: 正常保存、原始要求保持不变且返回真实草稿
+ok 26 - 正常保存、原始要求保持不变且返回真实草稿
+  ---
+  duration_ms: 40.972334
+  type: 'test'
+  ...
+# Subtest: 冲突建议在本人确认前不保存，另一个用户无权确认
+ok 27 - 冲突建议在本人确认前不保存，另一个用户无权确认
+  ---
+  duration_ms: 16.009667
+  type: 'test'
+  ...
+# Subtest: 时间同意不能替代风险同意；禁止性风险不能豁免
+ok 28 - 时间同意不能替代风险同意；禁止性风险不能豁免
+  ---
+  duration_ms: 14.015708
+  type: 'test'
+  ...
+# Subtest: 资料补充递增版本、记录来源并使旧确认失效
+ok 29 - 资料补充递增版本、记录来源并使旧确认失效
+  ---
+  duration_ms: 11.359542
+  type: 'test'
+  ...
+# Subtest: 修改建议版本后旧确认失效，拒绝后不能继续写入
+ok 30 - 修改建议版本后旧确认失效，拒绝后不能继续写入
+  ---
+  duration_ms: 11.507
+  type: 'test'
+  ...
+# Subtest: 规则变更也会使已接受的确认失效
+ok 31 - 规则变更也会使已接受的确认失效
+  ---
+  duration_ms: 10.724084
+  type: 'test'
+  ...
+# Subtest: 确认之后仍复检时段，不把旧查询结果当成可保存依据
+ok 32 - 确认之后仍复检时段，不把旧查询结果当成可保存依据
+  ---
+  duration_ms: 10.841208
+  type: 'test'
+  ...
+# Subtest: 已保存草稿占用时段，查询时排除自身
+ok 33 - 已保存草稿占用时段，查询时排除自身
+  ---
+  duration_ms: 12.538708
+  type: 'test'
+  ...
+# Subtest: 重复提交、重启恢复返回同一草稿，同请求不同输入报错
+ok 34 - 重复提交、重启恢复返回同一草稿，同请求不同输入报错
+  ---
+  duration_ms: 17.892875
+  type: 'test'
+  ...
+# Subtest: INSERT 后保存失败会真实回滚，随后重试不产生重复
+ok 35 - INSERT 后保存失败会真实回滚，随后重试不产生重复
+  ---
+  duration_ms: 12.599958
+  type: 'test'
+  ...
+# Subtest: 资料不足不能保存，补查及人工补充后可以继续
+ok 36 - 资料不足不能保存，补查及人工补充后可以继续
+  ---
+  duration_ms: 9.95425
+  type: 'test'
+  ...
+# Subtest: 窗口内选择无需变更确认，窗口外拒绝保存
+ok 37 - 窗口内选择无需变更确认，窗口外拒绝保存
+  ---
+  duration_ms: 10.894375
+  type: 'test'
+  ...
+# Subtest: 输入不能伪造确认，时间必须为有效整点，自动请求键稳定
+ok 38 - 输入不能伪造确认，时间必须为有效整点，自动请求键稳定
+  ---
+  duration_ms: 8.248333
+  type: 'test'
+  ...
+# Subtest: 同批次待确认建议供后续项避让，但不占用其他会话
+ok 39 - 同批次待确认建议供后续项避让，但不占用其他会话
+  ---
+  duration_ms: 12.416625
+  type: 'test'
+  ...
+# Subtest: 待处理列表区分缺资料、待确认和保存失败，成功后移出清单
+ok 40 - 待处理列表区分缺资料、待确认和保存失败，成功后移出清单
+  ---
+  duration_ms: 13.848083
+  type: 'test'
+  ...
+# Subtest: 保存后重复同意幂等，但不能通过拒绝确认撤销已有草稿
+ok 41 - 保存后重复同意幂等，但不能通过拒绝确认撤销已有草稿
+  ---
+  duration_ms: 8.910459
+  type: 'test'
+  ...
+# Subtest: 待处理清单能找出外部占用变化后需人工处理的已存草稿
+ok 42 - 待处理清单能找出外部占用变化后需人工处理的已存草稿
+  ---
+  duration_ms: 9.853208
+  type: 'test'
+  ...
+# (node:20061) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: 终端聊天保留模型等待期间到达的输入，完成真实 CLI 确认与重复提交
+ok 43 - 终端聊天保留模型等待期间到达的输入，完成真实 CLI 确认与重复提交
+  ---
+  duration_ms: 2438.87125
+  type: 'test'
+  ...
+# Subtest: 关闭聊天后通过 --session 恢复具体建议，显式接受后才保存
+ok 44 - 关闭聊天后通过 --session 恢复具体建议，显式接受后才保存
+  ---
+  duration_ms: 2755.2665
+  type: 'test'
+  ...
+# Subtest: 终端重启默认恢复M06原任务，分轮补标题与授权后保存同一会话
+ok 45 - 终端重启默认恢复M06原任务，分轮补标题与授权后保存同一会话
+  ---
+  duration_ms: 2203.347959
+  type: 'test'
+  ...
+# Subtest: 终端重启也恢复尚未补齐的排期输入
+ok 46 - 终端重启也恢复尚未补齐的排期输入
+  ---
+  duration_ms: 1376.602542
+  type: 'test'
+  ...
+# Subtest: 终端与聊天日志脱敏配置密钥，未知输入不会停止后续对话
+ok 47 - 终端与聊天日志脱敏配置密钥，未知输入不会停止后续对话
+  ---
+  duration_ms: 656.248917
+  type: 'test'
+  ...
+# (node:20062) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: 聊天解析明确固定要求、渠道与上海时区相对日期
+ok 48 - 聊天解析明确固定要求、渠道与上海时区相对日期
+  ---
+  duration_ms: 38.398792
+  type: 'test'
+  ...
+# Subtest: 逐项查询与裸素材ID均定位已有任务，发布有明确边界
+ok 49 - 逐项查询与裸素材ID均定位已有任务，发布有明确边界
+  ---
+  duration_ms: 0.315542
+  type: 'test'
+  ...
+# Subtest: 按上海时间解析本周和下周，不因跨日、周日或跨年偏移
+ok 50 - 按上海时间解析本周和下周，不因跨日、周日或跨年偏移
+  ---
+  duration_ms: 1.054875
+  type: 'test'
+  ...
+# Subtest: 聊天不猜日期，不舍入时间，不从条件句或多个对象执行排期
+ok 51 - 聊天不猜日期，不舍入时间，不从条件句或多个对象执行排期
+  ---
+  duration_ms: 0.682042
+  type: 'test'
+  ...
+# Subtest: 同意采用完整明确词组，不从问句、假设或附加条件提取批准
+ok 52 - 同意采用完整明确词组，不从问句、假设或附加条件提取批准
+  ---
+  duration_ms: 0.488291
+  type: 'test'
+  ...
+# Subtest: 资料补充只提取显式字段，未知授权和附加指令不能变成 granted
+ok 53 - 资料补充只提取显式字段，未知授权和附加指令不能变成 granted
+  ---
+  duration_ms: 0.824833
+  type: 'test'
+  ...
+# (node:20064) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: 按素材发现任务仅返回本人任务，不能自动选取他人会话
+ok 54 - 按素材发现任务仅返回本人任务，不能自动选取他人会话
+  ---
+  duration_ms: 14.249458
+  type: 'test'
+  ...
+# Subtest: 终端检查点按操作者与模式隔离，陈旧终端不能覆盖更新的对话
+ok 55 - 终端检查点按操作者与模式隔离，陈旧终端不能覆盖更新的对话
+  ---
+  duration_ms: 8.932417
+  type: 'test'
+  ...
+# Subtest: 语义查询带素材证据时不能降级成全量清单，日期和时间可限定已有任务
+ok 56 - 语义查询带素材证据时不能降级成全量清单，日期和时间可限定已有任务
+  ---
+  duration_ms: 1.68075
+  type: 'test'
+  ...
+# (node:20077) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: 聊天完成冲突解释、本人确认、重跑去重，拒绝不同时间与假设同意
+ok 57 - 聊天完成冲突解释、本人确认、重跑去重，拒绝不同时间与假设同意
+  ---
+  duration_ms: 191.045584
+  type: 'test'
+  ...
+# Subtest: 聊天缺失日期时间会追问，补齐后才创建会话，取消输入不误拒绝建议
+ok 58 - 聊天缺失日期时间会追问，补齐后才创建会话，取消输入不误拒绝建议
+  ---
+  duration_ms: 41.366541
+  type: 'test'
+  ...
+# Subtest: 聊天必须分别确认风险与时间，模糊同意不能一次批准两类
+ok 59 - 聊天必须分别确认风险与时间，模糊同意不能一次批准两类
+  ---
+  duration_ms: 251.476125
+  type: 'test'
+  ...
+# Subtest: 聊天拒绝终止建议，跨进程恢复后可查看真实状态
+ok 60 - 聊天拒绝终止建议，跨进程恢复后可查看真实状态
+  ---
+  duration_ms: 56.048334
+  type: 'test'
+  ...
+# Subtest: 聊天不接受过期建议的同意，也不越过禁止风险
+ok 61 - 聊天不接受过期建议的同意，也不越过禁止风险
+  ---
+  duration_ms: 57.47425
+  type: 'test'
+  ...
+# Subtest: 聊天补充明确资料后重新审核，不能补充到其他素材
+ok 62 - 聊天补充明确资料后重新审核，不能补充到其他素材
+  ---
+  duration_ms: 140.030125
+  type: 'test'
+  ...
+# Subtest: 补充标题后保留排期和授权缺失，只在明确授权后保存
+ok 63 - 补充标题后保留排期和授权缺失，只在明确授权后保存
+  ---
+  duration_ms: 213.642833
+  type: 'test'
+  ...
+# Subtest: 旧业务任务可按素材查询恢复，直接补充M06无需重填日期时间
+ok 64 - 旧业务任务可按素材查询恢复，直接补充M06无需重填日期时间
+  ---
+  duration_ms: 82.662
+  type: 'test'
+  ...
+# Subtest: 同一素材多个未完成任务必须选定，不能自动补充或确认
+ok 65 - 同一素材多个未完成任务必须选定，不能自动补充或确认
+  ---
+  duration_ms: 117.22475
+  type: 'test'
+  ...
+# Subtest: 发布请求不写入任何发布或草稿结果
+ok 66 - 发布请求不写入任何发布或草稿结果
+  ---
+  duration_ms: 6.593333
+  type: 'test'
+  ...
+# Subtest: 聊天保存失败仍无草稿，恢复存储后重试复用原会话
+ok 67 - 聊天保存失败仍无草稿，恢复存储后重试复用原会话
+  ---
+  duration_ms: 82.143042
+  type: 'test'
+  ...
+# Subtest: 无会话的恢复与确认输入返回提示，不使聊天进程崩溃
+ok 68 - 无会话的恢复与确认输入返回提示，不使聊天进程崩溃
+  ---
+  duration_ms: 11.968583
+  type: 'test'
+  ...
+# Subtest: 聊天同意后时段再次被占用，复检产生新建议而不沿用旧批准保存
+ok 69 - 聊天同意后时段再次被占用，复检产生新建议而不沿用旧批准保存
+  ---
+  duration_ms: 42.79775
+  type: 'test'
+  ...
+# Subtest: 开始另一个未完整请求后，不能把泛化同意套用到上一个素材
+ok 70 - 开始另一个未完整请求后，不能把泛化同意套用到上一个素材
+  ---
+  duration_ms: 91.12
+  type: 'test'
+  ...
+# Subtest: 模糊输入澄清后仍保留当前建议，上下文中的同意可以继续保存
+ok 71 - 模糊输入澄清后仍保留当前建议，上下文中的同意可以继续保存
+  ---
+  duration_ms: 101.560584
+  type: 'test'
+  ...
+# Subtest: 确认可用于单一待确认事项，不能笼统批准时间与风险两项
+ok 72 - 确认可用于单一待确认事项，不能笼统批准时间与风险两项
+  ---
+  duration_ms: 22.682334
+  type: 'test'
+  ...
+# (node:20078) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: 两个独立进程并发保存只产生一份草稿并返回同一编号
+ok 73 - 两个独立进程并发保存只产生一份草稿并返回同一编号
+  ---
+  duration_ms: 383.959958
+  type: 'test'
+  ...
+# Subtest: CLI 跨进程 run→show→confirm→重复 run 的完整确认闭环
+ok 74 - CLI 跨进程 run→show→confirm→重复 run 的完整确认闭环
+  ---
+  duration_ms: 6093.2575
+  type: 'test'
+  ...
+# Subtest: 模型参数保留默认值，并支持低成本非思考配置
+ok 75 - 模型参数保留默认值，并支持低成本非思考配置
+  ---
+  duration_ms: 0.98425
+  type: 'test'
+  ...
+# Subtest: 无效 Token 或思考参数在发起模型请求前被拒绝
+ok 76 - 无效 Token 或思考参数在发起模型请求前被拒绝
+  ---
+  duration_ms: 0.390916
+  type: 'test'
+  ...
+# (node:20094) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: 同一 Pi Session 保留前轮用户和业务回复，处置后从 SessionManager 文件恢复（模型为测试替身）
+ok 77 - 同一 Pi Session 保留前轮用户和业务回复，处置后从 SessionManager 文件恢复（模型为测试替身）
+  ---
+  duration_ms: 423.948958
+  type: 'test'
+  ...
+# Subtest: Pi 根据当前缺失字段逐轮补标题和授权，模型引用上下文ID不会导致补资料失败（协议替身）
+ok 78 - Pi 根据当前缺失字段逐轮补标题和授权，模型引用上下文ID不会导致补资料失败（协议替身）
+  ---
+  duration_ms: 36.337459
+  type: 'test'
+  ...
+# Subtest: HTTP 相同 conversationId 复用 Pi 上下文，重建 API 实例后仍能恢复且不外泄会话文件
+ok 79 - HTTP 相同 conversationId 复用 Pi 上下文，重建 API 实例后仍能恢复且不外泄会话文件
+  ---
+  duration_ms: 84.047458
+  type: 'test'
+  ...
+# Subtest: 补资料澄清不创建新的排期输入，也不丢失当前素材和时间
+ok 80 - 补资料澄清不创建新的排期输入，也不丢失当前素材和时间
+  ---
+  duration_ms: 59.104167
+  type: 'test'
+  ...
+# (node:20103) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: 真实 Provider 适配器可完成 OpenAI SSE tool calling 协议（上游为测试替身，不是真实模型）
+ok 81 - 真实 Provider 适配器可完成 OpenAI SSE tool calling 协议（上游为测试替身，不是真实模型）
+  ---
+  duration_ms: 307.356625
+  type: 'test'
+  ...
+# Subtest: 缺少真实模型配置时明确失败，不自动回退成 Mock 成功
+ok 82 - 缺少真实模型配置时明确失败，不自动回退成 Mock 成功
+  ---
+  duration_ms: 8.804792
+  type: 'test'
+  ...
+# Subtest: 模型只声称成功却没有调用工具时，输出 incomplete 且没有草稿
+ok 83 - 模型只声称成功却没有调用工具时，输出 incomplete 且没有草稿
+  ---
+  duration_ms: 39.212458
+  type: 'test'
+  ...
+# Subtest: 模型服务挂起时宿主超时取消，返回 incomplete 且无写入
+ok 84 - 模型服务挂起时宿主超时取消，返回 incomplete 且无写入
+  ---
+  duration_ms: 123.689084
+  type: 'test'
+  ...
+# (node:20112) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: 未校验或没有草稿凭据不能跳到保存成功
+ok 85 - 未校验或没有草稿凭据不能跳到保存成功
+  ---
+  duration_ms: 1.20225
+  type: 'test'
+  ...
+# Subtest: 确认状态迁移必须有具体建议决定，拒绝后终止不可恢复写入
+ok 86 - 确认状态迁移必须有具体建议决定，拒绝后终止不可恢复写入
+  ---
+  duration_ms: 0.240792
+  type: 'test'
+  ...
+# Subtest: 保存必须经过 ready 与 saving，已有草稿不能重新进入新保存流程
+ok 87 - 保存必须经过 ready 与 saving，已有草稿不能重新进入新保存流程
+  ---
+  duration_ms: 0.227417
+  type: 'test'
+  ...
+# (node:20114) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: Pi 扩展实时采集完整工具生命周期，callId、步骤、参数和结果保持关联
+ok 88 - Pi 扩展实时采集完整工具生命周期，callId、步骤、参数和结果保持关联
+  ---
+  duration_ms: 71.523708
+  type: 'test'
+  ...
+# Subtest: SDK 成功返回业务失败时 Trace 仍记录 ok=false 与实际错误码
+ok 89 - SDK 成功返回业务失败时 Trace 仍记录 ok=false 与实际错误码
+  ---
+  duration_ms: 32.07925
+  type: 'test'
+  ...
+# Subtest: 执行上限抛出的 SDK 工具异常同样由订阅记录，拒绝调用不会写入业务
+ok 90 - 执行上限抛出的 SDK 工具异常同样由订阅记录，拒绝调用不会写入业务
+  ---
+  duration_ms: 24.155209
+  type: 'test'
+  ...
+# Subtest: 批量素材各自扩展的日志保持正确上下文，步骤在整个 run 内连续
+ok 91 - 批量素材各自扩展的日志保持正确上下文，步骤在整个 run 内连续
+  ---
+  duration_ms: 36.233083
+  type: 'test'
+  ...
+1..91
+# tests 91
+# suites 0
+# pass 91
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 9872.824834

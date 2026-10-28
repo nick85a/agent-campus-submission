@@ -1,0 +1,40 @@
+{
+  "at": "2026-10-28T04:22:13.459Z",
+  "status": "smoke_verified",
+  "configured": true,
+  "model": "kimi-k2.6",
+  "parameters": {
+    "maxTokens": 1024,
+    "contextWindow": 262144,
+    "thinking": "disabled"
+  },
+  "scope": "当前业务架构下的真实模型正常与冲突两条路径；未执行完整真实模型评估",
+  "cases": [
+    {
+      "name": "smoke-normal",
+      "model": "kimi-k2.6",
+      "expectedStatus": "saved",
+      "actualStatus": "saved",
+      "runStatus": "completed",
+      "decisions": 4,
+      "toolCalls": 5,
+      "drafts": 1,
+      "passed": true,
+      "error": null,
+      "trace": "examples/live/smoke-normal/trace.jsonl"
+    },
+    {
+      "name": "smoke-conflict",
+      "model": "kimi-k2.6",
+      "expectedStatus": "needs_confirmation",
+      "actualStatus": "needs_confirmation",
+      "runStatus": "awaiting_input",
+      "decisions": 4,
+      "toolCalls": 5,
+      "drafts": 0,
+      "passed": true,
+      "error": null,
+      "trace": "examples/live/smoke-conflict/trace.jsonl"
+    }
+  ]
+}
